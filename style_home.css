@@ -1,0 +1,110 @@
+.wrapper {
+	width:858px;
+	margin:0 auto;	
+}
+
+h1#logo,
+h1#logo a, h1#logo a:visited {
+	height: 97px;
+	width: 282px;
+	}
+
+h1#logo {
+	margin: 38px 0 26px;	
+}
+
+h1#logo a, h1#logo a:visited {
+	background: url(images/logo_home.gif) no-repeat;
+	}
+
+#masthead-content {
+	width: 550px;	
+}
+
+#main {
+	padding: 0;	
+}
+
+#top {
+	display: block;
+	background: url(images/bg_feature-content-top.png) no-repeat;
+	height: 9px;
+}
+
+#feature-panel-content {
+	background: url(images/bg_feature-content.png) repeat-y;	
+}
+
+#content {
+	width: 525px;
+	padding: 9px 0 0;
+}
+
+#feature {
+	padding: 5px 18px;
+	overflow: hidden;
+}
+
+#sidebar {
+	margin-top: 35px;	
+}
+
+#feature-tab {
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	width: 240px;
+	line-height: 26px;
+	margin-left: 25px;
+	color: #ebebd0;
+	border-bottom: 1px solid #4f325d;
+	background: url(images/bg_tab.gif) no-repeat;
+	min-height: 24px;
+	padding: 3px 0 0 9px;
+}
+
+#feature-panel {
+	background: url(images/bg_feature.jpg);
+	border: 1px solid #ead3f6;
+	border-top-color: #e0dfe1;
+	border-bottom: none;
+	padding: 15px 24px 0;
+}
+
+#main .entry img {
+	margin-top: 0;	
+}
+
+#main .entry .text {
+	float: left;
+	width: 255px;
+	margin-top: 12px;
+}
+
+#masthead-content .entry {
+	clear: both;	
+	width: 480px;
+	float: right;
+	margin-top: 40px;
+	padding-bottom: 0;
+}
+
+#masthead-content .entry * {
+	display: inline;
+	line-height: 20px !important;
+}
+
+#masthead-content .entry strong {
+	font: 1.77em 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+}
+
+#masthead-content .entry strong em {
+	font-style: normal;	
+	color: #5c7e45;
+}
+
+#masthead-content .entry .more {
+	background-position: right 4px;	
+}
