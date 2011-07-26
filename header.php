@@ -8,8 +8,7 @@
 
 <link href='http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen,projection" />
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style_print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 <?php if(is_front_page()) : ?><link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style_home.css" /> <?php endif; ?>
 
