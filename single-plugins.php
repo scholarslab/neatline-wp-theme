@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<?php include_once (TEMPLATEPATH . "/childnav.php"); ?>
+	
 		
 	<div id="page-hdr">
 		<h2 class="pagetitle"><?php echo get_the_title('6'); ?></h2>

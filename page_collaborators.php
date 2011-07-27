@@ -6,7 +6,7 @@ Template Name: Collaborators
 
 <?php get_header(); ?>
 
-<?php include_once (TEMPLATEPATH . "/childnav.php"); ?>
+
 
 <div id="page-hdr">
 	<h2 class="pagetitle"><?php if($section_title) { echo $section_title; } else { the_title(); } ?></h2>
