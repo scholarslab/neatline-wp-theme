@@ -1,11 +1,5 @@
 <?php get_header(); ?>
 
-<?php if(is_front_page()) : ?>
-	
-	<?php include_once (TEMPLATEPATH . "/page_home.php"); ?>
-
-<?php else : ?>
-
 <div id="page-hdr">
 	<div class="hdr-feed">
 		<h2 class="pagetitle"><?php wp_title(''); ?></h2>
@@ -34,7 +28,5 @@
 	</div><!--/content-->
 	
 	<?php get_sidebar(); ?>
-
-<?php endif; ?>
 
 <?php get_footer(); ?>
