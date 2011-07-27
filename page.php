@@ -1,9 +1,3 @@
-<?php if(is_front_page()) : ?>
-	
-	<?php include_once (TEMPLATEPATH . "/page_home.php"); ?>
-
-<?php else : ?>
-
 <?php get_header(); ?>
 
 	
