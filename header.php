@@ -19,7 +19,7 @@
 
 </head>
 
-<body <?php echo bodystyle(); ?>>
+<body <?php echo body_class(); ?>>
 <div id="wrapper">
 
 <div class="wrapper">

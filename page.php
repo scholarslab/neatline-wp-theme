@@ -8,7 +8,7 @@
 
 	
 		
-	<div id="page-hdr">
+	<div>
 		<h2 class="pagetitle"><?php if($section_title) { echo $section_title; } else { the_title(); } ?></h2>
 	</div>
 	
@@ -25,11 +25,11 @@
 					<?php the_content(); ?>
 				</div>
 			</div>
-			
+
 			<?php endwhile; endif; ?>
 		</div>
 	
-	<?php include_once (TEMPLATEPATH . "/sidebar-page.php"); ?>
+
 
 <?php get_footer(); ?>
 <?php endif; ?>

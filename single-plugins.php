@@ -22,6 +22,6 @@
 			<?php endif; ?>
 		</div>
 	
-	<?php include_once (TEMPLATEPATH . "/sidebar-page.php"); ?>
+	
 
 <?php get_footer(); ?>
