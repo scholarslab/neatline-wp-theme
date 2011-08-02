@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if IEMobile 7 ]><html class="ie iem7" ><![endif]-->
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo('charset'); ?>" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
 <title><?php dynamictitles(); ?></title>
 
 <!-- Style sheets -->
 <link href="http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<?php if(is_front_page()) : ?><link rel="stylesheet" type="text/css" media="screen" href="<?php bloginfo('template_url'); ?>/style_home.css" /> <?php endif; ?>
+
+<!-- enable HTML5 elements in IE7+8 --> 
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 <!-- Feeds and Pingbacks -->
 <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
@@ -20,21 +30,17 @@
 </head>
 
 <body <?php echo body_class(); ?>>
-<div id="wrapper">
 
-<div class="wrapper">
-<div id="masthead">
+<div id="wrapper" class="container">
 
-	<h1 id="logo"><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo_print.gif" alt="<?php bloginfo('name'); ?>" border="0" /></a></h1>
+<header role="banner" class="container">
 
+    <h1 id="logo"><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo_home.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
 
-	<div id="masthead-content">
-<?php wp_nav_menu('theme_location=menu&menu_id=nav&sort_column=menu_order&container_class=navmenu&depth=1'); ?> 
+    <nav id="sitenav">
+        <?php wp_nav_menu('theme_location=menu&menu_id=nav&sort_column=menu_order&container_class=navmenu&depth=1'); ?> 
+    </nav>
 
-<?php if(!is_front_page()) : ?>
-	</div>
+</header><!--/masthead-->
 
-</div><!--/masthead-->
-</div>
-<div id="main">
-<?php endif; ?>
+<div id="content" role="main">

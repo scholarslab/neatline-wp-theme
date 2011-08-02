@@ -1,12 +1,5 @@
 <?php get_header(); ?>
-
-<div id="page-hdr">
-	<h2 class="pagetitle"><?php _e('Error 404 - Not Found','themename'); ?></h2>
-</div>
-
-<div id="content-wrapper" class="wrapper">
-
-<div class="entry">
+<h1 class="posttitle"><?php _e('Error 404 - Not Found','themename'); ?></h1>
 
 <p>You 
 <?php
@@ -27,7 +20,5 @@ and it doesn't exist.</p>
 	<input class="input" type="text" value="<?php the_search_query(); ?>" name="s" />
 	<input class="button" type="submit" value="Search" />
 </form>
-
-</div>
 
 <?php get_footer(); ?>

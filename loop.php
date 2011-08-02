@@ -1,30 +1,17 @@
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
  
- <h2 class="posttitle">
-<?php if (is_single()) { ?>
-	<?php the_title(); ?>
-  
-  <?php } elseif (is_search()) { ?>
- 
-    <a href="<?php the_permalink() ?>" rel="bookmark"><?php search_title_highlight(); ?></a>
-	
-     <?php } else { ?> 
-    
-    <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
-    
-	<?php } ?>
-</h2>
+<h1 class="posttitle">
 
-<?php if (is_search() && in_category(1)) : ?>
+<?php if (is_search()): ?>
 
-<?php else : ?>
-	<p class="postmetadata"><em><?php _e('by','themename'); ?></em> <?php the_author(); ?> <em><?php _e('on','themename'); ?></em> <?php the_time('M d, Y'); ?>
-    <?php if ('open' == $post->comment_status) :
-		if (!is_single()) : ?>
-		<span class="commentcount">(<?php comments_popup_link('0', '1', '%'); ?>) <?php _e('Comments','themename'); ?></span>
-	<?php endif; endif; ?>
-	</p>
+<a href="<?php the_permalink() ?>" rel="bookmark"><?php search_title_highlight(); ?></a>
+
+<?php else: ?> 
+
+<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
+
 <?php endif; ?>
+</h1>
 
 <div class="entry">
 <?php if (is_archive() || is_home()) { ?>
@@ -55,4 +42,4 @@
 <?php } ?>
 
 </div><!--/end entry-->
-</div><!--/end post-->
+</article><!--/end post-->

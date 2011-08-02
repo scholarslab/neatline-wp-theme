@@ -1,27 +1,22 @@
 <?php get_header(); ?>
 
-<div id="page-hdr">
-	<h2 class="pagetitle">Search</h2>
-</div>
+<h1 class="posttitle">Search</h1>
 
-<div id="content-wrapper" class="wrapper">
-	<div id="content">
+    <h2>Search Results for "<em><?php the_search_query() ?></em>"</h2>
 
-	<h2>Search Results for "<em><?php the_search_query() ?></em>"</h2>
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	
-			<?php include (TEMPLATEPATH . '/loop.php'); ?>
+    <?php include (TEMPLATEPATH . '/loop.php'); ?>
 
-		<?php endwhile; ?>
-		
-		<?php include (TEMPLATEPATH . '/pagination.php'); ?>
-        
-	<?php else : ?>
-		<p><?php _e('No posts found.','themename'); ?></p>
-	<?php endif; ?>
+    <?php endwhile; ?>
 
-</div>
+    <?php include (TEMPLATEPATH . '/pagination.php'); ?>
+
+    <?php else : ?>
+
+    <p><?php _e('No posts found.','themename'); ?></p>
+
+    <?php endif; ?>
 
 <?php get_sidebar(); ?>
 

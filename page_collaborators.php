@@ -6,14 +6,8 @@ Template Name: Collaborators
 
 <?php get_header(); ?>
 
-
-
-<div id="page-hdr">
-	<h2 class="pagetitle"><?php if($section_title) { echo $section_title; } else { the_title(); } ?></h2>
-</div>
+<h1 class="posttitle"><?php if($section_title) { echo $section_title; } else { the_title(); } ?></h1>
 	
-	<div id="content-wrapper" class="wrapper">
-
 	<div id="<?php if ($children || $numpages > '1') { ?>content<?php } else { ?>widecolumn<?php } ?>">
 	
 		<?php if($section_title) { ?><h2 class="posttitle"><?php the_title(); ?></h2><?php } ?>
@@ -85,8 +79,6 @@ if ( has_post_thumbnail() ) :
 			<?php wp_reset_query(); ?>
 		<?php endwhile; endif; ?>
 		<?php wp_reset_query(); ?>
-	
-	</div>
 
 <?php include_once (TEMPLATEPATH . "/sidebar-page.php"); ?>
 

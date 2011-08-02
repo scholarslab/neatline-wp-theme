@@ -1,7 +1,6 @@
 <div id="sidebar">
 
-
-<!--Begin Related Posts-->		
+<!--Begin Related Posts-->
 	<?php
 		if ( is_single() ) :
 		global $post;
@@ -10,7 +9,7 @@
    		$posts = get_posts('numberposts=4&exclude=' . $GLOBALS['current_id'] . '&category='. $category->term_id);
 		if(count($posts) >= 1) {
 	?>
-	
+
 	<div class="widget">
 	<h3><?php _e('More in','themename'); ?> '<?php echo $category->name; ?>'</h3>
 	<ul>
@@ -19,7 +18,7 @@
 	<?php endforeach; ?>
 	</ul>
 	</div>
-	
+
 	<?php } ?>
 
 <?php endforeach; ?>
@@ -29,6 +28,6 @@
 
 
 <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Blog Sidebar') ) : ?><?php endif; ?>
- 		
+
 
 </div><!--/sidebar-->

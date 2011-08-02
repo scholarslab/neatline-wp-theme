@@ -181,6 +181,24 @@ function dynamictitles() {
 }
 }
 
+function neatline_blog_archive_title() {
+    // Set up our blog archives title.
+    $pageTitle = 'Blog Archives';
+    
+    if (is_category()) {
+        $pageTitle = $pageTitle . ': &#8220;'.single_cat_title().'&#8221; Category';
+    } elseif (is_tag()) {
+        $pageTitle = $pageTitle .': &#8220;'.single_tag_title().'&#8221; Tag';
+    } elseif(is_day()) {
+        $pageTitle = $pageTitle .': '.the_time('F jS, Y');
+    } elseif (is_month()) {
+        $pageTitle = $pageTitle .': '.the_time('F, Y');
+    } elseif (is_year()) {
+        $pageTitle = $pageTitle .': '.the_time('Y');
+    }
+    
+    echo $pageTitle;
+}
 /* Widgets ********************************************/
 
 if ( function_exists('register_sidebar') ) :

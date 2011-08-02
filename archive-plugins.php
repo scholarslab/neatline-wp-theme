@@ -1,39 +1,19 @@
 <?php get_header(); ?>
+<h1 class="posttitle"><?php echo post_type_archive_title(); ?></h1>
 
-<div id="page-hdr">
-	<div class="hdr-feed">
-		<h2 class="pagetitle">Plugins</h2>		
-	</div>
-</div>
+    <?php if (have_posts()) :
+        query_posts( $query_string . '&orderby=menu_order&order=ASC&posts_per_page=-1' );
+        while (have_posts()) : the_post(); ?>
 
-<div id="content-wrapper" class="wrapper">
-<div id="widecolumn">
-	
-	<div class="multipage clearfloat">
+        <?php include (TEMPLATEPATH . '/loop_plugin.php'); ?>
 
-		<?php $alt = ''; ?>
-		<?php if (have_posts()) :
-		query_posts( $query_string . '&orderby=menu_order&order=ASC&posts_per_page=-1' );
-		while (have_posts()) : the_post(); ?>
-		
-            <?php include (TEMPLATEPATH . '/loop_plugin.php'); ?>
+        <?php endwhile; ?>
+        <?php include (TEMPLATEPATH . '/pagination.php'); ?>
 
-		<?php endwhile; ?>
-		
-		<?php if ($alt=='alt') { ?>
-					</div><!--/final row-->
-		<?php } ?>
-	
-		<?php include (TEMPLATEPATH . '/pagination.php'); ?>
-		
-	<?php else : ?>
+    <?php else : ?>
 
-		<h2><?php _e('Not Found','themename'); ?></h2>
-		
-	<?php endif; ?>
-	
-	</div>
+        <h2><?php _e('Not Found','themename'); ?></h2>
 
-</div><!--/widecolumn-->
+    <?php endif; ?>
 
 <?php get_footer(); ?>
