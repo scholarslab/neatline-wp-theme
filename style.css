@@ -167,6 +167,7 @@ header[role=banner] {
 #logo {
     text-align:center;
 }
+
 #logo img {
     max-width:100%;
 }
@@ -206,8 +207,27 @@ header[role=banner] {
     color: #999;
 }
 
+#featured-images {
+    width: 100%;
+}
 #features-images img {
     max-width: 100%;
+}
+
+/* Post Styles */
+.entry .alignleft {
+    float:left;
+    margin-right: 20px;
+}
+
+.entry .alignright {
+    float:right;
+    margin-left: 20px;
+}
+
+.wp-caption-text {
+    color: rgba(0,0,0,0.5);
+    font-size: 0.923076923em;    
 }
 
 /* Footer
@@ -237,7 +257,7 @@ header[role=banner] {
 
 #logo {
     float:left;
-    width: 40%;
+    width: 300px;
 }
 
 #sitenav {
