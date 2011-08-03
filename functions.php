@@ -231,3 +231,13 @@ if ( function_exists('register_sidebar') ) :
         'after_title' => '</h4>',
     ));
 endif;
+
+/* Navigation Menus **************************************/
+if ( function_exists('register_nav_menus') ) :
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+	'header' => __( 'Header Navigation', 'neatline-theme' ),
+	'footer' => __( 'Footer Navigation', 'neatline-theme' ),
+	
+) );	
+endif;

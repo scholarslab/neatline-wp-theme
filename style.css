@@ -65,7 +65,8 @@ table {
 article,
 header,
 footer,
-section {
+section,
+nav {
     display:block;
 }
 
@@ -74,7 +75,7 @@ section {
 body {
     background: #f9f9f9 url(images/bg_wrapper.jpg);
     font: 81.25%/1.53846154em Verdana, Arial, Geneva, sans-serif;
-    border-top: 5px solid #5B396C;
+    border-top: 5px solid rgba(90,60,110, 1);
     color: #444;
 }
 
@@ -86,11 +87,24 @@ nav ol {
 }
 
 /* Headings */
+h1,
+h2,
+h3 {
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+}
 h1 {
-    font: 1.42857143em/2em Georgia, "Times New Roman", Times, serif;
+    font-size: 1.42857143em;
+    line-height:2em; 
 }
 
 /* Links */
+a, a:visited {
+    color: #7a7a69;
+}
+
+a:hover, a:active {
+    color:#5c7e45;
+}
 
 h1 a,
 h2 a,
@@ -111,26 +125,28 @@ h3 a {
     zoom:1;
 }
 
-/* Wrapper
+/* Header Banner
 ----------------------------------------------------------------------------*/
-#wrapper {
+header[role=banner] {
+    padding-top: 1.53846154em; /* 20px/13px */
     width: 90%;
     margin: 0 auto;
 }
 
-/* Header Banner
-----------------------------------------------------------------------------*/
-header[role=banner] {
-    padding-top: 20px;
-}
-
 #sitenav {
     text-align:center;
-    border: 1px dotted #ccc;
-    border-width: 1px 0;
-    font-family: Georgia, serif;
+    border-bottom: 1px solid rgba(255,255,255,1);
+    border-top: 1px solid rgba(0,0,0,0.125);
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
     text-transform:uppercase;
     letter-spacing: 1px;
+    font-size: 1.15384615em;
+}
+
+#sitenav ul {
+    margin:0; padding:10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+    border-top: 1px solid rgba(255,255,255,1);
 }
 
 #sitenav li {
@@ -141,18 +157,112 @@ header[role=banner] {
     content: ' · ';
     color: #ccc;
     font-weight:bold;
+    padding: 0 2px;
 }
 
 #sitenav a {
     text-decoration:none;
 }
+
+#logo {
+    text-align:center;
+}
+#logo img {
+    max-width:100%;
+}
+
 /* Content
 ----------------------------------------------------------------------------*/
 #content {
     clear:both;
+    width: 90%;
+    margin: 0 auto;
 }
-h1.posttitle {
+
+#content h1.posttitle {
+    font-size:2.30769231em;
+}
+
+/* Homepage Styles */
+#pitch {
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    font-size: 1.53846154em;
+    line-height: 1.5em;
+}
+
+#feature-set nav {
     text-align:center;
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    text-transform:uppercase;
+    letter-spacing: 1px;
+}
+
+#feature-set nav li {
+    display:inline;
+}
+
+#feature-set nav li:not(:first-child):before {
+    content: " · ";
+    color: #999;
+}
+
+#features-images img {
+    max-width: 100%;
+}
+
+/* Footer
+----------------------------------------------------------------------------*/
+footer {
+    padding: 1.53846154em 0;
+    width: 90%;
+    margin:0 auto;
+}
+}
+
+@media only screen and (min-width: 760px) {
+
+header[role=banner],
+#content,
+footer {
+    width: 720px;
+}
+
+header[role=banner] {
+    border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+#content {
+    border-top: 1px solid rgba(255,255,255,1);
+}
+
+#logo {
+    float:left;
+    width: 40%;
+}
+
+#sitenav {
+    float:right;
+    border:none;
+    line-height: 100px;
+}
+
+#sitenav ul {
+    border:none;
+}
+
+#feature-set {
+    background: rgba(255,255,255,0.75);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.075);
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+#feature-set img {
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+#feature-set nav {
+    font-size: 1.53846154em;
 }
 }
 
@@ -185,4 +295,7 @@ h1, h2, h3 {
 page-break-after : avoid; }
 
 nav {display:none;}
+
+#logo
+
 }

@@ -79,7 +79,7 @@ if ( has_post_thumbnail() ) :
 			<?php wp_reset_query(); ?>
 		<?php endwhile; endif; ?>
 		<?php wp_reset_query(); ?>
-
+</div>
 <?php include_once (TEMPLATEPATH . "/sidebar-page.php"); ?>
 
 <?php get_footer(); ?>

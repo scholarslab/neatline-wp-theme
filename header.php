@@ -31,14 +31,16 @@
 
 <body <?php echo body_class(); ?>>
 
-<div id="wrapper" class="container">
-
 <header role="banner" class="container">
 
-    <h1 id="logo"><a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/logo_home.png" alt="<?php bloginfo('name'); ?>" /></a></h1>
+    <h1 id="logo">
+        <a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>">
+            <img src="<?php bloginfo('template_url'); ?>/images/neatline-logo-rgb.png" alt="<?php bloginfo('name'); ?>" />
+        </a>
+    </h1>
 
     <nav id="sitenav">
-        <?php wp_nav_menu('theme_location=menu&menu_id=nav&sort_column=menu_order&container_class=navmenu&depth=1'); ?> 
+        <?php wp_nav_menu('theme_location=header'); ?> 
     </nav>
 
 </header><!--/masthead-->
