@@ -1,13 +1,13 @@
-/*  
+/*
 Theme Name: Neatline
 Theme URI: http://neatline.org
 Description: A theme for the Neatline website.
 Version: 1.0
 Author: Scholars' Lab
 Author URI: http://scholarslab.org
+*/
 
-/* ---------- @ screen media -----------*/
-
+/*== @ screen media ==*/
 @media screen {
 
 html, body, div, span, applet, object, iframe,
@@ -72,10 +72,15 @@ nav {
 
 /* Base Styles
 ----------------------------------------------------------------------------*/
-body {
+html {
     background: #f9f9f9 url(images/bg_wrapper.jpg);
+    border-top: 10px solid rgba(90,60,110, 1);
+}
+
+body {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.075) 0, rgba(0,0,0,0) 10%);
+    border-top:2px solid rgba(255,255,255,0.75);
     font: 81.25%/1.53846154em Verdana, Arial, Geneva, sans-serif;
-    border-top: 5px solid rgba(90,60,110, 1);
     color: #444;
 }
 
@@ -90,11 +95,12 @@ nav ol {
 h1,
 h2,
 h3 {
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
 }
 h1 {
     font-size: 1.42857143em;
-    line-height:2em; 
+    line-height:2em;
+    text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
 /* Links */
@@ -103,13 +109,90 @@ a, a:visited {
 }
 
 a:hover, a:active {
-    color:#5c7e45;
+    color:#ba9e06;
 }
 
 h1 a,
 h2 a,
 h3 a {
     text-decoration:none;
+}
+
+/* Buttons */
+
+input[type=submit],
+input[type=button],
+button,
+a.button,
+input.button {
+    border-width: 1px;
+    border-style:solid;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-image: -webkit-gradient(
+        linear,
+        0% 0%,
+        0% 100%,
+        color-stop(0, rgba(255, 255, 255, .05)),
+        color-stop(0.5, rgba(255, 255, 255, .25)),
+        color-stop(0.5001, rgba(255, 255, 255, 0)),
+        color-stop(1, rgba(255, 255, 255, 0))
+    );
+
+    background-image: -webkit-linear-gradient(
+        top,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25) 50%,
+        rgba(255,255,255,0) 50.01%,
+        rgba(255,255,255,0)
+    );
+
+    background-image: -moz-linear-gradient(
+        top,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25) 50%,
+        rgba(255,255,255,0) 50.01%,
+        rgba(255,255,255,0)
+    );
+    background-image: -o-linear-gradient(
+        top,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25) 50%,
+        rgba(255,255,255,0) 50.01%,
+        rgba(255,255,255,0)
+    );
+
+    background-image: -ms-linear-gradient(
+        top,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25) 50%,
+        rgba(255,255,255,0) 50.01%,
+        rgba(255,255,255,0)
+    );
+
+    background-image: linear-gradient(
+        top,
+        rgba(255,255,255,0.05),
+        rgba(255,255,255,0.25) 50%,
+        rgba(255,255,255,0) 50.01%,
+        rgba(255,255,255,0)
+    );
+
+    text-shadow:-1px -1px 1px rgba(0,0,0,0.2);
+    text-align:center;
+    color: #fff;
+    font-weight:bold;
+    background-color: #7a7a69;
+    border-color: #7a7a69;
+    border-radius: 4px;
+    padding:4px 8px;
+    text-decoration:none;
+}
+
+a.button:link,
+a.button:visited {
+    color:#fff;
 }
 
 /* Utility Classes */
@@ -128,25 +211,25 @@ h3 a {
 /* Header Banner
 ----------------------------------------------------------------------------*/
 header[role=banner] {
-    padding-top: 1.53846154em; /* 20px/13px */
     width: 90%;
     margin: 0 auto;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 40px 0 0;
 }
 
 #sitenav {
     text-align:center;
-    border-bottom: 1px solid rgba(255,255,255,1);
-    border-top: 1px solid rgba(0,0,0,0.125);
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     text-transform:uppercase;
     letter-spacing: 1px;
-    font-size: 1.15384615em;
+    font-size: 1em;
+    line-height: 3em;
 }
 
 #sitenav ul {
-    margin:0; padding:10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.125);
-    border-top: 1px solid rgba(255,255,255,1);
+    margin:0; padding:0;
+    border-top: 2px solid rgba(255,255,255,1);
 }
 
 #sitenav li {
@@ -154,10 +237,8 @@ header[role=banner] {
 }
 
 #sitenav li:not(:first-child):before {
-    content: ' · ';
-    color: #ccc;
-    font-weight:bold;
-    padding: 0 2px;
+    content: " · ";
+    padding: 0 4px;
 }
 
 #sitenav a {
@@ -178,6 +259,8 @@ header[role=banner] {
     clear:both;
     width: 90%;
     margin: 0 auto;
+    border-top: 2px solid rgba(255,255,255,1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 #content h1.posttitle {
@@ -186,14 +269,14 @@ header[role=banner] {
 
 /* Homepage Styles */
 #pitch {
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     font-size: 1.53846154em;
     line-height: 1.5em;
 }
 
 #feature-set nav {
     text-align:center;
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif; 
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     text-transform:uppercase;
     letter-spacing: 1px;
 }
@@ -227,7 +310,7 @@ header[role=banner] {
 
 .wp-caption-text {
     color: rgba(0,0,0,0.5);
-    font-size: 0.923076923em;    
+    font-size: 0.923076923em;
 }
 
 /* Footer
@@ -236,6 +319,7 @@ footer {
     padding: 1.53846154em 0;
     width: 90%;
     margin:0 auto;
+    border-top: 2px solid rgba(255,255,255,1);
 }
 }
 
@@ -244,30 +328,61 @@ footer {
 header[role=banner],
 #content,
 footer {
-    width: 720px;
+    max-width: 900px;
 }
 
 header[role=banner] {
-    border-bottom: 1px solid rgba(0,0,0,0.125);
+    padding-top: 20px;
 }
 
 #content {
-    border-top: 1px solid rgba(255,255,255,1);
 }
 
 #logo {
     float:left;
-    width: 300px;
+    width: 40%;
 }
 
 #sitenav {
     float:right;
     border:none;
-    line-height: 100px;
+    padding: 5% 0;
 }
 
 #sitenav ul {
     border:none;
+}
+
+/**
+ * ITS OVER 9000!!!
+ *
+ * Use the nuclear option (!important) to override inserted middots in early declaration,
+ * instead of writing out a really long, more specific selector, for simplicity.
+ * Though, I could have written a really long selector, more specific selector
+ * in the time I wrote this comment.
+ */
+#sitenav li:before {
+    content:none !important;
+    padding:0 !important;
+}
+
+#sitenav a {
+    display:block;
+    float:left;
+    padding: 0 12px;
+}
+
+#sitenav a:hover,
+#sitenav a:active {
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0, rgba(0,0,0,0) 50%);
+}
+
+#sitenav li:not(:first-child) a {
+    border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#sitenav li:not(:last-child) a {
+    border-right: 2px solid rgba(255,255,255,0.5);
 }
 
 #feature-set {
@@ -286,36 +401,35 @@ header[role=banner] {
 }
 }
 
+/*== @print media ==*/
 @media print {
-* { 
-background : transparent !important; 
-color : black !important; 
-text-shadow : none !important; 
+* {
+background : transparent !important;
+color : black !important;
+text-shadow : none !important;
 filter : none !important;
--ms-filter : none !important; } 
+-ms-filter : none !important; }
 
-pre, blockquote { 
-border : 1px solid #999; 
+pre, blockquote {
+border : 1px solid #999;
 page-break-inside : avoid; }
 
-thead { 
+thead {
 display : table-header-group; }
 
-tr, img { 
+tr, img {
 page-break-inside : avoid; }
 
-@page { 
+@page {
 margin : .5cm; }
 
-p, h2, h3 { 
-orphans : 3; 
+p, h2, h3 {
+orphans : 3;
 widows : 3; }
 
-h1, h2, h3 { 
+h1, h2, h3 {
 page-break-after : avoid; }
 
 nav {display:none;}
-
-#logo
 
 }
