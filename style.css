@@ -323,7 +323,7 @@ footer {
 }
 }
 
-@media only screen and (min-width: 760px) {
+@media screen and (min-width: 760px) {
 
 header[role=banner],
 #content,
