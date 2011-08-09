@@ -214,7 +214,7 @@ header[role=banner] {
     width: 90%;
     margin: 0 auto;
     border-bottom: 1px solid rgba(0,0,0,0.1);
-    padding: 40px 0 0;
+    padding: 20px 0 0;
 }
 
 #sitenav {
@@ -329,10 +329,6 @@ header[role=banner],
 #content,
 footer {
     max-width: 900px;
-}
-
-header[role=banner] {
-    padding-top: 20px;
 }
 
 #content {
