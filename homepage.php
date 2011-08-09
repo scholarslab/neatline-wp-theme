@@ -12,18 +12,4 @@ Template Name: Homepage
     </div>
 <?php endwhile; endif; ?>
 
-<div id="feature-set">
-    <div id="features-images">
-        <img src="<?php bloginfo('template_url'); ?>/images/screenshot-maps.jpg">
-    </div>
-    <nav>
-        <ul>
-            <li>Maps</li>
-            <li>Features</li>
-            <li>Timelines</li>
-            <li>In Concert</li>
-        </ul>
-    </nav>
-</div>
-
 <?php get_footer(); ?>
