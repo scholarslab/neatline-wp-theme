@@ -274,21 +274,40 @@ header[role=banner] {
     line-height: 1.5em;
 }
 
-#neatline-feature-gallery nav {
-    text-align:center;
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-    text-transform:uppercase;
-    letter-spacing: 1px;
+#neatline-feature-gallery {
+    margin-bottom: 1.53846154em;
 }
-
-#neatline-feature-gallery,
 #neatline-feature-gallery div {
-    width: 100% !important;
-    overflow:hidden;
+    width:100%;
 }
 
 #neatline-feature-gallery div img {
+    max-width: 100%;
 }
+
+#neatline-feature-gallery-nav {
+    text-align:center;
+    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+    margin:0 0 1em;
+    padding:0;
+    font-size:1em;
+    font-weight:bold;
+}
+
+#neatline-feature-gallery-nav li {
+    display:inline;
+}
+
+#neatline-feature-gallery-nav li:not(:first-child):before {
+    content: " · ";
+    padding: 0 4px;
+    text-decoration:none;
+}
+
+#neatline-feature-gallery-nav a {
+    text-decoration:none;
+}
+
 
 /* Post Styles */
 .entry .alignleft {

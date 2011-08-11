@@ -214,7 +214,7 @@ function neatline_feature_gallery() {
 	          . '<div id="screenshots" class="container">';
 	    foreach ($attachments as $id => $attachment) {
 	        $link = isset($attr['link']) && 'file' == $attr['link'] ? get_image_tag($id, null, $size, false, false) : get_image_tag($id, null, $size, true, false);
-	        $html .= '<div class="screenshot" id="'.$id.'">';
+	        $html .= '<div class="screenshot" id="'.strtolower(str_replace(' ', '-', $attachment->post_title)).'">';
 	        $html .= '<h2>'.wptexturize($attachment->post_title).'</h2>';
 	        $html .= $link;
 	        $html .= wptexturize($attachment->post_content);
