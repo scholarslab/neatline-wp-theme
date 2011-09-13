@@ -12,7 +12,7 @@ Template Name: Homepage
     </div>
 <?php endwhile; endif; ?>
 <?php
-
+/*
 // Get the page object for "Neatline in Action"
 $inActionPage = get_page_by_title( 'Neatline In Action');
 if ($inActionPage):
@@ -44,6 +44,6 @@ if ($inActionPage):
     <?php endif; ?>
     <?php wp_reset_query(); ?>
     </div>
-<?php endif; ?>
+<?php endif; */?>
 
 <?php get_footer(); ?>
