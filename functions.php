@@ -200,34 +200,6 @@ function neatline_blog_archive_title() {
     echo $pageTitle;
 }
 
-function neatline_feature_gallery() {
-	global $post;
-
-    $html = '';
-    
-    $id = $post->ID;
-	
-    $attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'order' => 'ASC', 'orderby' => 'menu_order', 'post_mime_type' => 'image') );
-	
-	if ($attachments) {
-	    $html = '<div id="neatline-feature-gallery" class="container">'
-	          . '<div id="screenshots" class="container">';
-	    foreach ($attachments as $id => $attachment) {
-	        $link = isset($attr['link']) && 'file' == $attr['link'] ? get_image_tag($id, null, $size, false, false) : get_image_tag($id, null, $size, true, false);
-	        $html .= '<div class="screenshot" id="'.strtolower(str_replace(' ', '-', $attachment->post_title)).'">';
-	        $html .= '<h2>'.wptexturize($attachment->post_title).'</h2>';
-	        $html .= $link;
-	        $html .= wptexturize($attachment->post_content);
-	        $html .= '</div>';
-	    }
-	    $html .= '</div></div>';
-	}
-
-	return $html;
-}
-
-add_shortcode('neatline_feature_gallery', 'neatline_feature_gallery');
-
 /**
  * Removes inline width and height attributes for images. Thanks to
  * @boone and @wayne_graham for help with this!
@@ -238,7 +210,7 @@ function clioweb_remove_inline_sizes($html) {
     return $html;
 }
 
-add_filter( 'get_image_tag', 'clioweb_remove_inline_sizes', 10, 1 );
+add_filter( 'post_thumbnail_html', 'clioweb_remove_inline_sizes', 10, 1 );
 
 /* Widgets ********************************************/
 

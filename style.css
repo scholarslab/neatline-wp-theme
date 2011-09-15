@@ -80,7 +80,7 @@ html {
 body {
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.075) 0, rgba(0,0,0,0) 10%);
     border-top:2px solid rgba(255,255,255,0.75);
-    font: 81.25%/1.53846154em Verdana, Arial, Geneva, sans-serif;
+    font: 125%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     color: #444;
 }
 
@@ -91,15 +91,8 @@ nav ol {
     padding-left:0;
 }
 
-/* Headings */
-h1,
-h2,
-h3 {
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-}
 h1 {
-    font-size: 1.42857143em;
-    line-height:2em;
+  font-size:2em;
     text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
@@ -195,6 +188,15 @@ a.button:visited {
     color:#fff;
 }
 
+.deck {
+  font-size:0.6em;
+  line-height:1em;
+  font-family: Verdana, sans-serif;
+  font-weight:bold;
+  color: rgba(0,0,0,0.25);
+  margin: 1.75em 0 -1.75em;
+}
+
 /* Utility Classes */
 .container:after {
     content: ".";
@@ -220,10 +222,9 @@ header[role=banner] {
 #sitenav {
     text-align:center;
     border-top: 1px solid rgba(0,0,0,0.1);
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     text-transform:uppercase;
     letter-spacing: 1px;
-    font-size: 1em;
+    font-size:75%;
     line-height: 3em;
 }
 
@@ -261,68 +262,37 @@ header[role=banner] {
     margin: 0 auto;
     border-top: 2px solid rgba(255,255,255,1);
     border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-#content h1.posttitle {
-    font-size:2.30769231em;
+    padding-bottom: 2em;
 }
 
 /* Homepage Styles */
 #pitch {
     font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-    font-size: 1.53846154em;
-    line-height: 1.5em;
 }
 
-#neatline-feature-gallery {
-    margin-bottom: 1.53846154em;
-}
-#neatline-feature-gallery div {
-    width:100%;
+#screenshots img {
+  max-width: 100%;
 }
 
-#neatline-feature-gallery div img {
-    max-width: 100%;
+#screenshots a {
+  text-decoration:none;
+  border:none;
 }
-
-#neatline-feature-gallery-nav {
-    text-align:center;
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
-    margin:0 0 1em;
-    padding:0;
-    font-size:1em;
-    font-weight:bold;
-}
-
-#neatline-feature-gallery-nav li {
-    display:inline;
-}
-
-#neatline-feature-gallery-nav li:not(:first-child):before {
-    content: " · ";
-    padding: 0 4px;
-    text-decoration:none;
-}
-
-#neatline-feature-gallery-nav a {
-    text-decoration:none;
-}
-
 
 /* Post Styles */
 .entry .alignleft {
     float:left;
-    margin-right: 20px;
+    margin-right: 1em;
 }
 
 .entry .alignright {
     float:right;
-    margin-left: 20px;
+    margin-left: 1em;
 }
 
 .wp-caption-text {
     color: rgba(0,0,0,0.5);
-    font-size: 0.923076923em;
+    font-size: 0.6em;
 }
 
 /* Footer
@@ -334,6 +304,17 @@ footer {
     border-top: 2px solid rgba(255,255,255,1);
     clear:both;
 }
+
+footer .textwidget {
+  font-family: Verdana, sans-serif;
+  font-size: 0.6em;
+  color: #777;
+}
+
+footer .widget h4 {
+  display:none;
+}
+
 }
 
 @media screen and (min-width: 780px) {
@@ -341,10 +322,7 @@ footer {
 header[role=banner],
 #content,
 footer {
-    max-width: 900px;
-}
-
-#content {
+    max-width: 980px;
 }
 
 #logo {
@@ -381,11 +359,6 @@ footer {
     padding: 0 12px;
 }
 
-#sitenav a:hover,
-#sitenav a:active {
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.05) 0, rgba(0,0,0,0) 50%);
-}
-
 #sitenav li:not(:first-child) a {
     border-left: 1px solid rgba(0,0,0,0.1);
 }
@@ -394,16 +367,36 @@ footer {
     border-right: 2px solid rgba(255,255,255,0.5);
 }
 
-#neatline-feature-gallery {
-    background: rgba(255,255,255,0.75);
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.075);
-    border:1px solid rgba(0,0,0,0.1);
+#screenshots .screenshot {
+  float:left;
+  width: 28%;
+  margin-right: 2%;
+  display:block;
+  padding: 0 2%;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
-#neatline-feature-gallery nav {
-    font-size: 1.53846154em;
+#screenshots .screenshot:last-child {
+  margin-right:0;
 }
+
+#screenshots .screenshot:hover {
+  background:rgb(255,255,255);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
+}
+
+footer .widget {
+  float:left;
+  width: 49%;
+}
+
+footer #slab-info {
+  float:right;
+  width: 49%;
+  text-align:right;
+
 }
 
 /*== @print media ==*/

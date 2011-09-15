@@ -26,7 +26,7 @@
 <?php if ( is_singular() ) wp_enqueue_script('comment-reply'); ?>
 <?php
 if (is_page('Homepage')) {
-    wp_enqueue_script('neatline-scripts', get_bloginfo('template_url') . '/scripts.js', array('jquery'),null, true);
+    // wp_enqueue_script('neatline-scripts', get_bloginfo('template_url') . '/scripts.js', array('jquery'),null, true);
 }
 ?>
 <?php wp_head(); ?>

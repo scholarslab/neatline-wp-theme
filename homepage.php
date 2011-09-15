@@ -11,10 +11,36 @@ Template Name: Homepage
     <?php the_content(); ?>
     </div>
 <?php endwhile; endif; ?>
+
+<?php
+
+// Loop through our Neatline Plugins posts
+
+$neatlinePlugins = new WP_Query(array('post_type' => 'plugins', 'order' => 'ASC'));
+
+if ($neatlinePlugins->have_posts()) : ?>
+
+<div id="screenshots" class="container">
+<?php while ($neatlinePlugins->have_posts()) : $neatlinePlugins->the_post(); ?>
+
+<a class="screenshot" href="<?php the_permalink(); ?>">
+  <h2><?php the_title(); ?></h2>
+  <?php if (has_post_thumbnail()) {
+      the_post_thumbnail('fullsize');
+    }
+  ?>
+  <?php the_excerpt(); ?>
+</a>
+
+<?php endwhile; ?>
+</div>
+
+<?php wp_reset_query(); endif; ?>
+
 <?php
 /*
 // Get the page object for "Neatline in Action"
-$inActionPage = get_page_by_title( 'Neatline In Action');
+$inActionPage = get_page_by_title( 'Neatli In ');
 if ($inActionPage):
     
     // Query WP for all the child pages for "Neatline in Action"
@@ -44,6 +70,6 @@ if ($inActionPage):
     <?php endif; ?>
     <?php wp_reset_query(); ?>
     </div>
-<?php endif; */?>
+<?php endif; */ ?>
 
 <?php get_footer(); ?>
