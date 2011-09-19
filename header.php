@@ -49,4 +49,4 @@ if (is_page('Homepage')) {
 
 </header><!--/masthead-->
 
-<div id="content" role="main">
+<div id="content" role="main" class="container">
