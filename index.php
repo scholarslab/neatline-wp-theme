@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 <div id="primary">
+
+    <?php if (is_home() || is_archive()): ?>
+    <h1>News</h1>
+    <?php endif; ?>
+
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php include (TEMPLATEPATH . '/loop.php'); ?>

@@ -96,6 +96,10 @@ h1 {
     text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
+.blog article h1,
+.archive article h1 {
+}
+
 /* Links */
 a, a:visited {
     color: #7a7a69;
