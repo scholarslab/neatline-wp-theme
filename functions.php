@@ -223,14 +223,7 @@ if ( function_exists('register_sidebar') ) :
         'after_title' => '</h3>',
     ));
 	 register_sidebar(array(
-		'name' => 'Homepage Sidebar',
-        'before_widget' => '<div class="%2$s widget clearfloat">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widgettitle">',
-        'after_title' => '</h3>',
-    ));
-	 register_sidebar(array(
-		'name' => 'Page Sidebar',
+		'name' => 'About Page Sidebar',
         'before_widget' => '<div class="%2$s widget clearfloat">',
         'after_widget' => '</div>',
         'before_title' => '<h3 class="widgettitle">',

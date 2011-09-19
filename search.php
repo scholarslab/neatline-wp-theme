@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div id="primary">
 <h1 class="posttitle">Search</h1>
 
     <h2>Search Results for "<em><?php the_search_query() ?></em>"</h2>
@@ -17,7 +17,7 @@
     <p><?php _e('No posts found.','themename'); ?></p>
 
     <?php endif; ?>
-
+</div>
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

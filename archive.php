@@ -1,8 +1,6 @@
 <?php get_header(); ?>
-
+<div id="primary">
     <?php if (have_posts()) : $post = $posts[0]; ?>
-    <h1 class="posttitle"><?php neatline_blog_archives_title(); ?></h1>
-
 
 		<?php while (have_posts()) : the_post(); ?>
 		
@@ -18,7 +16,7 @@
 		
 	<?php endif; ?>
 
-	</div>
+</div>
 
 <?php get_sidebar(); ?>
 

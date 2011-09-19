@@ -39,7 +39,7 @@ if (is_page('Homepage')) {
 
     <h1 id="logo">
         <a href="<?php echo get_option('home'); ?>/" title="<?php _e('Home','themename'); ?>">
-            <img src="<?php bloginfo('template_url'); ?>/images/neatline-logo-rgb.png" alt="<?php bloginfo('name'); ?>" />
+        <img src="<?php bloginfo('template_url'); ?>/images/neatline-logo-rgb.png" alt="<?php bloginfo('name'); ?>" />
         </a>
     </h1>
 

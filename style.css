@@ -387,17 +387,18 @@ footer {
   
 }
 
-article #primary {
+#primary {
   float:left;
   width: 70%;
 }
 
-article #secondary {
+#secondary {
   float:right;
   width: 25%;
   font-family: Verdana, sans-serif;
   font-size: 0.6em;
   color: #777;
+  padding-top: 3em;
 }
 
 #secondary h2 {
@@ -412,6 +413,7 @@ article #secondary {
 #secondary ul {
   padding-bottom: 1em;
   margin-bottom:0;
+  padding-left:1.5em;
   
 }
 #secondary ul:not(:last-child) {
