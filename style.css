@@ -299,6 +299,11 @@ header[role=banner] {
     font-size: 0.6em;
 }
 
+.plugin-links span:not(:first-child):before {
+    content: " | ";
+    color: rgba(0,0,0,0.2);
+}
+
 /* Footer
 ----------------------------------------------------------------------------*/
 footer {
