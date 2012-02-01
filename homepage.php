@@ -16,7 +16,7 @@ Template Name: Homepage
 
 // Loop through our Neatline Plugins posts
 
-$neatlinePlugins = new WP_Query(array('post_type' => 'plugins', 'order' => 'ASC'));
+$neatlinePlugins = new WP_Query(array('post_type' => 'plugins', 'order_by' => 'menu_order'));
 
 if ($neatlinePlugins->have_posts()) : ?>
 

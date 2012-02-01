@@ -386,10 +386,18 @@ footer {
   float:left;
   width: 28%;
   margin-right: 2%;
+  margin-bottom: 1em;
   display:block;
   padding: 0 2%;
   background: rgba(255,255,255,0.75);
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#screenshots .screenshot:first-child {
+  float:none;
+  width: auto;
+  margin-right:0;
+  padding: 1% 2%;
 }
 
 #screenshots .screenshot:last-child {
