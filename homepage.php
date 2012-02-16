@@ -33,7 +33,7 @@ if ($neatlinePlugins->have_posts()) : ?>
 </a>
 <?php if ($post->menu_order == '1'): ?>
 <ul id="neatline-meta-links">
-  <li id="neatline-learn-more"><a href="<?php the_permalink(); ?>" class="button">Learn more about Neatline</a></li>
+  <li id="neatline-learn-more"><a href="<?php the_permalink(); ?>" class="button">Learn More</a></li>
   <li id="neatline-try-it"><a href="http://neatline.scholarslab.org" class="button">Try It!</a></li>
 </ul>
 <p id="separate-components-note">You can also use Neatline components separately.</p>
