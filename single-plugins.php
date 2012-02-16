@@ -1,45 +1,30 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
 <?php
-$video = get_post_meta( $post->ID , 'plugin_video' , true );
-$video_link = get_post_meta( $post->ID , 'plugin_video-link' , true );
+if (have_posts()) : while (have_posts()) : the_post();
+
+// Set some variables for our post metadata.
 $download = get_post_meta( $post->ID , 'plugin_download' , true );
-$image = wp_get_attachment_image_src ( get_post_thumbnail_id ( $post->ID ), 'full' ) ;
-$resized_image = get_bloginfo('template_directory').'/scripts/timthumb.php?src='.$image[0].'&amp;w=230&amp;h=170&amp;q=100&amp;zc=1';
-$more_info = get_post_meta( $post->ID , 'plugin_additional' , true );
+$github = get_post_meta( $post->ID, 'plugin_github_page', true );
 ?>
-
-<?php if(is_single()) : ?>
+<article class="plugin">
+    <header>
+        <div class="deck">Plugins</div>
+        <h1><?php the_title(); ?></h1>
+    </header>
+    <div id="plugin-meta" class="secondary">
+        <?php if ($download) : ?>
+                <p><a href="<?php echo $download; ?>" title="Download <?php the_title_attribute(); ?>" class="button">Download <?php the_title(); ?></a></p>
+        <?php endif; ?>
+        <?php if ($github) : ?><p>Keep up with development on <?php the_title(); ?> on <a href="<?php echo $github; ?>" title="View <?php the_title_attribute(); ?> on GitHub" class="github">GitHub</a>.</p><?php endif; ?>
+    </div>
+    <div id="plugin-content" class="primary">
+        <?php the_content(); ?>
+    </div>
+</article>
+<?php endwhile; else: ?>
 <div class="deck">Plugins</div>
-<h1><?php the_title(); ?></h1>
-<?php if($video) : ?>
-<?php echo ( do_shortcode( get_post_meta( $post->ID , 'plugin_video' , true ) ) ); ?>
+<h1>Plugin Not Found</h1>
 <?php endif; ?>
-<?php the_content(); ?>
-<?php else : ?>
-<h3><?php the_title(); ?></h3>
-<?php if($video) : ?>
-<?php echo do_shortcode($video); ?>
-<?php endif; ?>
-<?php the_content(); ?>
-<?php endif; ?>
-<?php if($download || $video_link) : ?>
-<?php if($video_link) : ?><a href="<?php echo $video_link; ?>" title="<?php the_title_attribute(); ?>" class="colorbox-link more download">View Larger Video</a><?php endif; ?>
-<?php if($download) : ?><a href="<?php echo $download; ?>" title="Download <?php the_title_attribute(); ?>" class="more download">Download</a><?php endif; ?>
-<?php endif; ?>
-<?php if($more_info) : ?>
-<div class="info">
-<?php echo $more_info; ?>
-</div>
-<?php endif; ?>
-</div>
-
-</div>
-
-
-
-<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

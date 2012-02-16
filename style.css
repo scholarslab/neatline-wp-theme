@@ -486,18 +486,23 @@ footer {
   font-size:150%;
 }
 
-#primary {
+#primary,
+.primary {
   float:left;
   width: 70%;
 }
 
-#secondary {
+#secondary,
+.secondary {
   float:right;
   width: 25%;
-  font-family: Verdana, sans-serif;
-  font-size: 0.6em;
-  color: #777;
-  padding-top: 3em;
+}
+
+#secondary {
+    font-family: Verdana, sans-serif;
+    font-size: 0.6em;
+    color: #777;
+    padding-top: 3em;
 }
 
 #secondary h2 {
@@ -517,7 +522,10 @@ footer {
 }
 #secondary ul:not(:last-child) {
     border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 
+#plugin-meta p {
+    color: rgba(0,0,0,0.5);
 }
 
 footer .widget {
