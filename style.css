@@ -524,6 +524,13 @@ footer {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
+#plugin-meta .button {
+    font-size: 75%;
+    display:block;
+    width: 100%;
+    padding:0.5em 0;
+    text-align:center;
+}
 #plugin-meta p {
     color: rgba(0,0,0,0.5);
 }
