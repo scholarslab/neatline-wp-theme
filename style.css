@@ -79,7 +79,10 @@ html {
 
 body {
     background: -webkit-linear-gradient(top, rgba(0,0,0,0.075) 0, rgba(0,0,0,0) 10%);
+    background-image: url(images/neatline-mark-tan.png);
+    background-repeat:no-repeat;
     border-top:2px solid rgba(255,255,255,0.75);
+    background-position: 50% 300px;
     font: 125%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     color: #444;
 }
