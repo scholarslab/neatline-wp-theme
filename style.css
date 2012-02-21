@@ -98,8 +98,13 @@ h1 {
 
 .blog article h1,
 .archive article h1 {
+    font-size: 1.5em;
 }
 
+.blog article p,
+.archive article p {
+    font-size: 0.85em;
+}
 /* Links */
 a, a:visited {
     color: #7a7a69;
