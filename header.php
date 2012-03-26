@@ -9,6 +9,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
 
 <title><?php dynamictitles(); ?></title>
+<link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
+
+<link rel="apple-touch-icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
 
 <!-- Style sheets -->
 <link href="http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic" rel="stylesheet" type="text/css" />
