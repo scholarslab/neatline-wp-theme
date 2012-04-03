@@ -17,6 +17,8 @@ $github = get_post_meta( $post->ID, 'plugin_github_page', true );
                 <p><a href="<?php echo $download; ?>" title="Download <?php the_title_attribute(); ?>" class="button">Download <?php the_title(); ?></a></p>
         <?php endif; ?>
         <?php if ($github) : ?><p>Keep up with development on <?php the_title(); ?> on <a href="<?php echo $github; ?>" title="View <?php the_title_attribute(); ?> on GitHub" class="github">GitHub</a>.</p><?php endif; ?>
+
+      <?php echo neatline_get_post_images(); ?>
     </div>
     <div id="plugin-content" class="primary">
         <?php the_content(); ?>

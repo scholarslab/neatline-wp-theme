@@ -247,3 +247,24 @@ register_nav_menus( array(
 	
 ) );	
 endif;
+
+function neatline_get_post_images() {
+  global $post;
+
+  $html = '';
+
+  $images = get_children( 'post_type=attachment&post_mime_type=image&post_parent='.$post->ID );
+
+  if ( $images ) {
+    foreach ( $images as $attachment_id => $attachment ) {
+      $html .= '<figure>';
+      $html .= wp_get_attachment_image( $attachment_id, 'full' );
+      $html .= '<figcaption>';
+      $html .= $attachment->post_excerpt;
+      $html .= '</figcaption>';
+      $html .= '</figure>';
+    }
+  }
+
+  return $html;
+}

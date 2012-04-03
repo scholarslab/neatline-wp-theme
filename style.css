@@ -258,6 +258,22 @@ h3 a {
     text-decoration:none;
 }
 
+figure {
+  margin-bottom:1em;
+}
+
+figcaption {
+  font-style:italic;
+  font-size: 0.85em;
+  color: rgba(0,0,0,0.5);
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
 /* Buttons */
 
 input[type=submit],
