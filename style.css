@@ -419,10 +419,6 @@ header[role=banner] {
     text-align:center;
 }
 
-#logo img {
-    max-width:100%;
-}
-
 /* Content
 ----------------------------------------------------------------------------*/
 #content {
@@ -549,6 +545,34 @@ footer .textwidget {
 footer .widget h4 {
   display:none;
 }
+
+#slab-info {
+  float:right;
+  display:table;
+}
+
+#slab-info ul,
+#slab-logo{
+  display: table-cell;
+  vertical-align:middle;
+}
+
+#slab-info ul {
+  list-style:none;
+  padding: 0 20px 0 0;
+  font-size:0.8em;
+  text-align:right;
+  line-height: 1.5em;
+}
+
+#slab-logo{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  border-left: 1px dotted #ddd;
+  padding:0;
+}
+
 
 }
 
