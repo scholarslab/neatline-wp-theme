@@ -1,7 +1,5 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
- 
-<h1 class="posttitle"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
+<h1><?php the_title(); ?></h1>
 <div class="entry">
 <?php if (is_archive() || is_home()) { ?>
 

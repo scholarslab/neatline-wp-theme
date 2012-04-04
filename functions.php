@@ -172,3 +172,24 @@ function neatline_get_post_images() {
 
   return $html;
 }
+
+/**
+ * Adds links to the_title() if not on a single post or page.
+ */
+function neatline_link_the_title($title) {
+  if (in_the_loop() && !is_singular()) {
+    $title = '<a href="'.get_permalink().'" rel="bookmark">'.$title.'</a>';
+  }
+  return $title;
+}
+
+add_filter('the_title', 'neatline_link_the_title');
+
+/**
+ * Replaces "[...]" on excerpt_more with an actual ellipsis.
+ */
+function neatline_excerpt_more( $more ) {
+  return '&hellip;' . '<a href="'.get_permalink().'">Continue reading.</a>';
+}
+
+add_filter( 'excerpt_more', 'neatline_excerpt_more' );
