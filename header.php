@@ -8,7 +8,7 @@
 <meta charset="<?php bloginfo('charset'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title><?php dynamictitles(); ?></title>
+<title><?php neatline_site_title(); ?></title>
 <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/favicon.png">
 
 <link rel="apple-touch-icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">

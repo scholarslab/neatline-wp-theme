@@ -1,28 +1,14 @@
 <?php
 
-
-//  TABLE OF CONTENTS
-
-//  Localization Initialize
-//  Featured Images
-//  Custom Post Types
-//  Add nextpage Button
-//  Menus
-//  Archive Pagination
-//  Search Highlighting
-//	Dynamic Titles
-//  Dynamic Body Classes
-//  Widgets
-//  Get the Image
-//  Comment output
-
-/* Featured Images ********************************************/
-
+/**
+ * Featured Images
+ */
 add_theme_support( 'post-thumbnails' );
 
 
-/* Custom Post Types ********************************************/
-
+/**
+ * Custom Post Types
+ */
 add_action( 'init', 'create_my_post_types' );
 
 function create_my_post_types() {
@@ -42,87 +28,23 @@ function create_my_post_types() {
 	);
 }
 
-// Menu Fix for CPT
-function remove_parent($var) {
-	// check for current page values, return false if they exist.
-	if ($var == 'current_page_item' || $var == 'current_page_parent' || $var == 'current_page_ancestor'  || $var == 'current-menu-item') { return false; }
-	return true;
-}
-function add_class_to_cpt_menu($classes) {
-	// your custom post type name
-	if (get_post_type() == 'plugins') {
-		// we're viewing a custom post type, so remove the 'current_page_xxx and current-menu-item' from all menu items.
-		$classes = array_filter($classes, "remove_parent");
-
-		// add the current page class to a specific menu item.
-		if (in_array('menu-item-108', $classes)) $classes[] = 'current_page_parent';
-	}
-	return $classes;
-}
-add_filter('nav_menu_css_class', 'add_class_to_cpt_menu');
-
-/* Add nextpage Button ********************************************/
-
-add_filter('mce_buttons','wysiwyg_editor');
-function wysiwyg_editor($mce_buttons) {
-    $pos = array_search('wp_more',$mce_buttons,true);
-    if ($pos !== false) {
-        $tmp_buttons = array_slice($mce_buttons, 0, $pos+1);
-        $tmp_buttons[] = 'wp_page';
-        $mce_buttons = array_merge($tmp_buttons, array_slice($mce_buttons, $pos+1));
-    }
-    return $mce_buttons;
-}
-
-
-/* Menus ********************************************/
-
+/**
+ * Menus
+ */
 add_theme_support('menus');
 
-add_action( 'init', 'register_the_menus' );
-function register_the_menus() {
-	register_nav_menus(array(
-			'menu' => __( 'Menu' )
-	));
-	register_nav_menus(array(
-            'menufooter' => __( 'Footer Menu' )
-    ));
-}
-
-function add_menuclass($ulclass) {
-	return preg_replace('/class="menu"/', 'class="menu clearfloat"', $ulclass, 1);
-}
-add_filter('wp_nav_menu','add_menuclass');
-
-function add_menuid($ulid) {
-	return preg_replace('/<ul>/', '<ul id="nav" class="clearfloat">', $ulid, 1);
-}
-add_filter('wp_page_menu','add_menuid');
-
-
-/* Search Highlighting ********************************************/
-
-function search_excerpt_highlight() {
-	$excerpt = get_the_excerpt();
-	$keys = implode('|', explode(' ', get_search_query()));
-	$excerpt = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $excerpt);
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+	'header' => __( 'Header Navigation', 'neatline-theme' ),
+	'footer' => __( 'Footer Navigation', 'neatline-theme' ),
 	
-	echo '<p>' . $excerpt . '</p>';
-}
-
-
-function search_title_highlight() {
-	$title = get_the_title();
-	$keys = implode('|', explode(' ', get_search_query()));
-	$title = preg_replace('/(' . $keys .')/iu', '<strong class="search-highlight">\0</strong>', $title);
-	
-	echo $title;
-}
-		
+) );
 		
 
-/* Dynamic Titles ********************************************/
-function dynamictitles() {
+/**
+ * Dynamic Titles
+ */
+function neatline_site_title() {
 	
 	if ( is_single() ) {
       wp_title('');
@@ -201,19 +123,8 @@ function neatline_blog_archive_title() {
 }
 
 /**
- * Removes inline width and height attributes for images. Thanks to
- * @boone and @wayne_graham for help with this!
+ * Register sidebars
  */
-function clioweb_remove_inline_sizes($html) {
-    $pattern = '/(\sheight|\swidth)="(.*?)"/';
-    $html = preg_replace($pattern, '', $html);
-    return $html;
-}
-
-add_filter( 'post_thumbnail_html', 'clioweb_remove_inline_sizes', 10, 1 );
-
-/* Widgets ********************************************/
-
 if ( function_exists('register_sidebar') ) :
     register_sidebar(array(
 		'name' => 'Blog Sidebar',
@@ -238,16 +149,9 @@ if ( function_exists('register_sidebar') ) :
     ));
 endif;
 
-/* Navigation Menus **************************************/
-if ( function_exists('register_nav_menus') ) :
-// This theme uses wp_nav_menu() in one location.
-register_nav_menus( array(
-	'header' => __( 'Header Navigation', 'neatline-theme' ),
-	'footer' => __( 'Footer Navigation', 'neatline-theme' ),
-	
-) );	
-endif;
-
+/**
+ * Gets images for a given post.
+ */
 function neatline_get_post_images() {
   global $post;
 
