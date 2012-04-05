@@ -9,7 +9,7 @@ $github = get_post_meta( $post->ID, 'plugin_github_page', true );
 ?>
 <article class="plugin">
     <header>
-        <div class="deck">Plugins</div>
+        <p class="kicker">Plugins</p>
         <h1><?php the_title(); ?></h1>
     </header>
     <div id="plugin-meta" class="secondary">

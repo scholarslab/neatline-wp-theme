@@ -1,5 +1,12 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<header>
+<?php if (!is_page()) : ?>
+<p class="kicker">
+  <time pubdate datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('F j, Y'); ?></time>
+</p>
+<?php endif; ?>
 <h1><?php the_title(); ?></h1>
+</header>
 <div class="entry">
 <?php if (is_archive() || is_home()) { ?>
 

@@ -1,4 +1,4 @@
-<article class="<?php post_class(); ?>">
+<article <?php post_class(); ?>>
 
 <?php
 $video = get_post_meta( $post->ID , 'plugin_video' , true );
@@ -11,7 +11,7 @@ $image = $image[0];
 $more_info = get_post_meta( $post->ID , 'plugin_additional' , true );
 ?>
 
-<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+<h1><?php the_title(); ?></h1>
 <?php if ($image) : ?>
 <img src="<?php echo $image; ?>" alt="<?php the_title(); ?>" />
 <?php endif; ?>
