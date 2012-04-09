@@ -707,12 +707,13 @@ footer {
 .secondary {
   float:right;
   width: 25%;
+  font-family: Verdana, sans-serif;
+  font-size: 0.6em;
+  color: #777;
+
 }
 
 #secondary {
-    font-family: Verdana, sans-serif;
-    font-size: 0.6em;
-    color: #777;
     padding-top: 3em;
 }
 
@@ -725,13 +726,15 @@ footer {
     border-top: 2px solid rgba(255,255,255,1);
 }  
 
-#secondary ul {
+#secondary ul,
+.secondary ul{
   padding-bottom: 1em;
   margin-bottom:0;
   padding-left:1.5em;
   
 }
-#secondary ul:not(:last-child) {
+#secondary ul:not(:last-child),
+.secondary ul:not(:last-child) {
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -763,6 +766,14 @@ footer {
   width: 48%;
 }
 
+.credits-and-history #primary {
+  width: auto;
+}
+
+.credits-and-history article h2 {
+  clear:both !important;
+}
+
 footer .widget {
   float:left;
   width: 49%;
@@ -773,6 +784,7 @@ footer #slab-info {
   width: 49%;
   text-align:right;
 
+}
 }
 
 /*== @print media ==*/
