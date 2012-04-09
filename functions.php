@@ -193,3 +193,15 @@ function neatline_excerpt_more( $more ) {
 }
 
 add_filter( 'excerpt_more', 'neatline_excerpt_more' );
+
+function neatline_add_post_title_class($classes) {
+  global $post;
+
+  if ($classTitle = sanitize_title($post->post_title)) {
+    $classes[] = $classTitle;
+  }
+
+  return $classes;
+}
+
+add_filter('body_class', 'neatline_add_post_title_class');
