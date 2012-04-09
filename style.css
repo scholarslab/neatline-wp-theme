@@ -545,6 +545,24 @@ header[role=banner] {
 .single article {
   padding-top:1em;
 }
+
+/* Plugin List */
+
+.archive article.plugins {
+  float:left;
+  clear:left;
+}
+.archive article.plugins .plugin-screen {
+  display:block;
+  float:right;
+  width: 48%;
+}
+
+.archive article.plugins .content {
+  float:left;
+  width: 48%;
+}
+
 /* Footer
 ----------------------------------------------------------------------------*/
 footer {
