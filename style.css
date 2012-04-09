@@ -739,7 +739,6 @@ footer {
 }
 
 #plugin-meta .button {
-    font-size: 75%;
     display:block;
     width: 100%;
     padding:0.5em 0;
@@ -774,6 +773,9 @@ footer {
   clear:both !important;
 }
 
+.credits-and-history #secondary {
+  display:none;
+}
 footer .widget {
   float:left;
   width: 49%;
