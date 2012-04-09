@@ -735,7 +735,7 @@ footer {
 }
 #secondary ul:not(:last-child),
 .secondary ul:not(:last-child) {
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 #plugin-meta .button {
@@ -771,8 +771,18 @@ footer {
 
 .credits-and-history article h2 {
   clear:both !important;
+  padding-top: 2em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
+.credits-and-history .primary * {
+  margin: 0 0 1em;
+}
+
+.credits-and-history .secondary {
+  padding-top:0.75em;
+}
 .credits-and-history #secondary {
   display:none;
 }
