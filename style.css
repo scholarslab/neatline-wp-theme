@@ -352,10 +352,12 @@ input.button {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     border: 1px solid rgba(0,0,0,0.15) !important;
-    padding:0.5em 1em;
     text-decoration:none;
-    line-height:2em;
     font-family: Verdana, sans-serif;
+}
+
+a.button {
+  padding: 0.25em 0.5em;
 }
 
 a.button:link,
@@ -404,6 +406,44 @@ header[role=banner] {
     padding: 20px 0 0;
 }
 
+#search {
+  font-size: 70%;
+  position:relative;
+}
+
+#search * {
+  margin:0;
+}
+#search input[type=search] {
+  border:1px solid rgba(0,0,0,0.1);
+  padding: 6px 30px 6px 6px;
+  margin:0;
+  border-radius: 4px;
+}
+
+#search input[type=submit] {
+  position:absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -1em;
+  content: "";
+  text-indent: -9999px;
+  background-image:url("images/magnifying-glass.png");
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
+  background-size: 70% 70%;
+  width: 2em;
+  height: 2em;
+  line-height:0;
+  border: none !important;
+  background-color: rgba(120,120,120, 0.7);
+  border-radius: 0 4px 4px 0;
+}
+
+#search input[type=submit]:hover,
+#search input[type=submit]:active {
+  background-color: rgba(120,120,120,0.9);
+}
 #sitenav {
     text-align:center;
     border-top: 1px solid rgba(0,0,0,0.1);
@@ -591,15 +631,25 @@ footer {
     max-width: 980px;
 }
 
+header[role=banner] {
+  padding:1em 0 0;
+}
+
+
 #logo {
     float:left;
     width: 40%;
-}
+    margin:0;
+    line-height:1;
+    padding: 0 0 1em;
+  }
 
 #sitenav {
     float:right;
     border:none;
-    padding: 5% 0;
+    clear:right;
+    padding-top: 4em;
+    margin-bottom: -1em;
 }
 
 #sitenav:before {
@@ -634,6 +684,13 @@ footer {
 
 #sitenav li:not(:last-child) a {
     border-right: 2px solid rgba(255,255,255,0.5);
+}
+
+form#search {
+  float:right;
+  clear:right;
+  text-align:right;
+  margin:0;
 }
 
 #screenshots .screenshot {

@@ -46,7 +46,10 @@
         <img src="<?php bloginfo('template_url'); ?>/images/neatline-logo-rgb.png" alt="<?php bloginfo('name'); ?>" />
         </a>
     </h1>
-
+    <form method="get" id="search" action="<?php bloginfo('url'); ?>/">
+	    <input class="input" placeholder="Search Neatline.org" type="search" value="<?php the_search_query(); ?>" name="s" />
+	    <input class="button" type="submit" value="Search" />
+    </form>
     <nav id="sitenav">
         <?php wp_nav_menu('theme_location=header'); ?> 
     </nav>
