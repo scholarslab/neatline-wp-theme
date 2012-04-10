@@ -46,8 +46,8 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
  * Also: hot pink! (or customize the background color to match your design)
  */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background rgb(194, 124, 242); color: #fff; text-shadow: none; }
+::selection { background: rgb(194, 124, 242); color: #fff; text-shadow: none; }
 
 
 /* =============================================================================
