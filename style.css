@@ -218,7 +218,7 @@ body {
     background-repeat:no-repeat;
     border-top:2px solid rgba(255,255,255,0.75);
     background-position: 50% 300px;
-    font: 125%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+    font: 110%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
     color: #444;
 }
 
@@ -409,6 +409,8 @@ header[role=banner] {
 #search {
   font-size: 70%;
   position:relative;
+  width: 200px;
+  margin: 0 auto 1em;;
 }
 
 #search * {
@@ -416,9 +418,10 @@ header[role=banner] {
 }
 #search input[type=search] {
   border:1px solid rgba(0,0,0,0.1);
-  padding: 6px 30px 6px 6px;
+  padding: 5px 2em 5px 5px;
   margin:0;
   border-radius: 4px;
+  width: 150px;
 }
 
 #search input[type=submit] {
@@ -621,6 +624,12 @@ footer .widget h4 {
   line-height: 1.5em;
 }
 
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    font: 125%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+  }
 }
 
 @media screen and (min-width: 780px) {
