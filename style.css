@@ -624,6 +624,9 @@ footer .widget h4 {
   line-height: 1.5em;
 }
 
+#slab-logo {
+  opacity: 0.5;
+}
 }
 
 @media screen and (min-width: 480px) {
