@@ -574,33 +574,12 @@ footer .widget h4 {
   display:none;
 }
 
-#slab-info {
-  float:right;
-  display:table;
-}
-
-#slab-info ul,
-#slab-logo{
-  display: table-cell;
-  vertical-align:middle;
-}
-
 #slab-info ul {
   list-style:none;
   padding: 0 20px 0 0;
   font-size:0.8em;
-  text-align:right;
   line-height: 1.5em;
 }
-
-#slab-logo{
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-  border-left: 1px dotted #ddd;
-  padding:0;
-}
-
 
 }
 
@@ -791,11 +770,25 @@ footer .widget {
   width: 49%;
 }
 
-footer #slab-info {
+#slab-info {
   float:right;
   width: 49%;
   text-align:right;
+  display:table;
+}
 
+#slab-info ul,
+#slab-logo{
+  display: table-cell;
+  vertical-align:middle;
+}
+
+#slab-logo{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  border-left: 1px dotted #ddd;
+  padding:0;
 }
 }
 
