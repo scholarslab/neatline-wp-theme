@@ -711,7 +711,7 @@ form#search {
   margin-right: 2%;
   margin-bottom: 0;
   display:block;
-  padding: 0 2%;
+  padding: 0 2% 2%;
   background: rgba(255,255,255,0.75);
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
