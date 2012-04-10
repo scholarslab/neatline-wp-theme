@@ -9,7 +9,7 @@
         <li><a href="http://www.scholarslab.org/category/praxis-program/feed/" class=feed>Subscribe to our Feed</a></li>
         <li><a class=email href="#">Contact Us</a></li>
       </ul>
-      <a id="slab-logo" href="http://www.scholarslab.org/"><img src="http://static.scholarslab.org/images/slab-logo-rgb-125px.png" title="Scholars' Lab" alt="Scholars' Lab"/></a>
+      <a id="slab-logo" href="http://www.scholarslab.org/"><img src="http://static.scholarslab.org/images/logos/slab/slab-logo-black-200px.png" title="Scholars' Lab" alt="Scholars' Lab"/></a>
     </div>
     <?php wp_footer(); ?>
 </footer><!--/footer-->
