@@ -196,8 +196,7 @@ add_filter( 'excerpt_more', 'neatline_excerpt_more' );
 
 function neatline_add_post_title_class($classes) {
   global $post;
-
-  if ($classTitle = sanitize_title($post->post_title)) {
+  if (is_singular() && $classTitle = sanitize_title($post->post_title)) {
     $classes[] = $classTitle;
   }
 
