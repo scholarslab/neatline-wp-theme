@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/images/apple-touch-icon.png">
 
 <!-- Style sheets -->
-<link href="http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Crimson+Text:regular,regularitalic,600,600italic,bold,bolditalic|Lato:300,700" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 
 <!-- Feeds and Pingbacks -->
