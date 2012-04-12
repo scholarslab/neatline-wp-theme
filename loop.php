@@ -8,7 +8,7 @@
 <h1><?php the_title(); ?></h1>
 </header>
 <div class="entry">
-<?php if (is_archive() || is_home()) { ?>
+<?php if (!is_singular()) { ?>
 
 	<?php the_excerpt(); ?>
 
