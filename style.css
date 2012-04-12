@@ -609,7 +609,7 @@ footer:before {
 
 footer .textwidget {
   font-family: "Lato", Verdana, sans-serif;
-  font-size: 0.6em;
+  font-size: 0.8em;
   color: #777;
 }
 
@@ -836,13 +836,12 @@ form#search {
 }
 footer .widget {
   float:left;
-  width: 49%;
+  width: 48%;
 }
 
 #slab-info {
   float:right;
-  width: 49%;
-  text-align:right;
+  width: 48%;
   display:table;
 }
 
@@ -856,7 +855,6 @@ footer .widget {
   display:table-cell;
   vertical-align:middle;
   text-align:center;
-  border-left: 1px dotted #ddd;
   padding:0;
 }
 }
