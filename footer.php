@@ -5,8 +5,8 @@
     </div>
     <div id="slab-info">
       <ul>
-        <li><a rel=license class=license href="http://creativecommons.org/licenses/by/3.0/">Creative Commons License</a></li>
-        <li><a href="http://www.scholarslab.org/category/praxis-program/feed/" class=feed>Subscribe to our Feed</a></li>
+        <li><a rel="license" class="license" href="http://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a></li>
+        <li><a href="<?php bloginfo('atom_url'); ?>" class="feed">Atom</a> · <a href="<?php bloginfo('rss2_url'); ?>">RSS</a></li>
         <li><a class=email href="#">Contact Us</a></li>
       </ul>
       <a id="slab-logo" href="http://www.scholarslab.org/"><img src="http://static.scholarslab.org/images/logos/slab/slab-logo-black-200px.png" title="Scholars' Lab" alt="Scholars' Lab"/></a>
