@@ -627,8 +627,19 @@ footer .widget h4 {
 #slab-logo {
   opacity: 0.5;
 }
+
+.not-yet {
+  padding-top: 200px;
+  background-image:none;
+}
+.not-yet .message,
+.not-yet h1 {
+  margin: 0 auto 100px;
+  max-width: 400px;
+  text-align:center;
 }
 
+}
 @media screen and (min-width: 480px) {
   body {
     font: 125%/1.5 'Crimson Text', Georgia, "Times New Roman", Times, serif;
