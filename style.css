@@ -629,7 +629,7 @@ footer .widget h4 {
 }
 
 .not-yet {
-  padding-top: 200px;
+  padding: 100px 20px 0;
   background-image:none;
 }
 .not-yet .message,
