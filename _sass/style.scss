@@ -1,0 +1,26 @@
+/*
+Theme Name: Neatline
+Theme URI: http://neatline.org
+Description: A theme for the Neatline website.
+Version: 1.0
+Author: Scholars' Lab
+Author URI: http://scholarslab.org
+*/
+
+@import "base";
+
+@media screen {
+  @import "media/screen";
+}
+
+@media screen and (min-width: 480px) {
+  @import "media/screen_480";
+}
+
+@media screen and (min-width: 768px) {
+  @import "media/screen_768";
+}
+
+@media print {
+  @import "media/print";  
+}

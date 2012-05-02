@@ -1,0 +1,39 @@
+@mixin kicker {
+  font-style:italic;
+  color: $default-color-lighter;
+}
+
+@mixin sans-serif {
+  font-family: Verdana, sans-serif;
+}
+
+@mixin serif {
+  font-family: Georgia, serif;
+}
+
+@mixin monospace {
+  font-family: "Andale Mono", monospace;
+}
+
+@mixin rgba-background-color($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}
+
+// Generates a valid RGB value for browsers that can't handle RGBA.
+@mixin rgba-color($color, $alpha, $bgcolor: #fff) {
+  $percent : $alpha * 100;
+  $weight: 100 - $percent;
+  color: mix($color, $bgcolor, $weight);
+  color: rgba($color, $alpha);
+}
+
+@mixin horizontal-nav {
+}
+
+@mixin vertical-nav {
+}

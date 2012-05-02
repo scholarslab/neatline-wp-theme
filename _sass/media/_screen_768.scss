@@ -1,0 +1,229 @@
+header[role=banner],
+#content,
+footer {
+  max-width: 980px;
+}
+
+header[role=banner] {
+  padding:1em 0 0;
+}
+
+
+#logo {
+  float:left;
+  width: 40%;
+  margin:0;
+  line-height:1;
+  padding: 0 0 1em;
+}
+
+#sitenav {
+  float:right;
+  border:none;
+  clear:right;
+  padding-top: 4em;
+  margin-bottom: -1em;
+}
+
+#sitenav:before {
+  display:none;
+}
+#sitenav ul {
+  border:none;
+}
+
+/**
+ * ITS OVER 9000!!!
+ *
+ * Use the nuclear option (!important) to override inserted middots in early declaration,
+ * instead of writing out a really long, more specific selector, for simplicity.
+ * Though, I could have written a really long selector, more specific selector
+ * in the time I wrote this comment.
+ */
+#sitenav li:before {
+  content:none !important;
+  padding:0 !important;
+}
+
+#sitenav a {
+  display:block;
+  float:left;
+  padding: 0 12px;
+}
+
+#sitenav li:not(:first-child) a {
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+
+#sitenav li:not(:last-child) a {
+  border-right: 2px solid rgba(255,255,255,0.5);
+}
+
+form#search {
+  float:right;
+  clear:right;
+  text-align:right;
+  margin:0;
+}
+
+#screenshots .screenshot {
+  float:left;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 0;
+  display:block;
+  padding: 0 2% 2%;
+  background: rgba(255,255,255,0.75);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+#screenshots .screenshot:hover {
+  background:rgb(255,255,255);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#screenshots .screenshot:first-child {
+  float:none;
+  width: auto;
+}
+
+#screenshots .screenshot img {
+  padding: 0;
+  margin-bottom: 1em;
+  max-width: 100%;
+  background: transparent;
+}
+
+#screenshots .screenshot:last-child {
+  margin-right:0 !important;
+}
+
+#separate-components-note {
+  clear:both;
+  font-style:italic;
+  text-align:center;
+  color: rgba(0,0,0,0.7);
+  font-size:150%;
+}
+
+#primary,
+.primary {
+  float:left;
+  width: 70%;
+}
+
+#secondary,
+.secondary {
+  float:right;
+  width: 25%;
+  font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
+  font-size: 0.75em;
+  color: #777;
+
+}
+
+#secondary {
+  padding-top: 3em;
+}
+
+#secondary h2 {
+  margin:0;
+  padding:0;
+}
+
+#secondary ul,
+.secondary ul{
+  padding-left:0;
+  margin-left: 1.5em;
+}
+
+#secondary ul:not(:last-child):after,
+.secondary ul:not(:last-child):after {
+  margin: 1em 0 1em -1.5em;
+  display:block;
+  content:"";
+  height:0px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(255,255,255,1);
+  padding:0;
+}
+
+#plugin-meta .button {
+  display:block;
+  width: 100%;
+  padding:0.5em 0;
+  text-align:center;
+}
+#plugin-meta p {
+  color: rgba(0,0,0,0.5);
+}
+
+/* Plugin List */
+
+.archive article.plugins {
+  float:left;
+  clear:left;
+}
+.archive article.plugins .plugin-screen {
+  display:block;
+  float:right;
+  width: 48%;
+}
+
+.archive article.plugins .content {
+  float:left;
+  width: 48%;
+}
+
+.credits-and-history #primary {
+  width: auto;
+}
+
+.credits-and-history article h2 {
+  clear:both !important;
+  padding-top: 2em;
+}
+
+.credits-and-history article h2:before {
+  display:block;
+  content:"";
+  height:0px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  border-bottom: 1px solid rgba(255,255,255,1);
+  margin-bottom: 0.5em;
+
+}
+
+.credits-and-history .primary * {
+  margin: 0 0 1em;
+}
+
+.credits-and-history .secondary {
+  padding-top:0.75em;
+}
+.credits-and-history #secondary {
+  display:none;
+}
+footer .widget {
+  float:left;
+  width: 48%;
+}
+
+#slab-info {
+  float:right;
+  width: 48%;
+  display:table;
+}
+
+#slab-info ul,
+#slab-logo{
+  display: table-cell;
+  vertical-align:middle;
+}
+
+#slab-logo{
+  display:table-cell;
+  vertical-align:middle;
+  text-align:center;
+  padding:0;
+}
