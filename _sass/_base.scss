@@ -1,2 +1,32 @@
+// Imports -------------------------------------------------------------------
+
+@import "compass";
+@import "susy";
 @import "mixins";
 @import "normalize";
+
+// Susy Variables ------------------------------------------------------------
+
+$legacy-support-for-ie6         : false;
+$legacy-support-for-ie7         : false !default;
+$legacy-support-for-ie8         : false !default;
+$ie                             : false !default;
+
+$show-column-grid-backgrounds   : false;
+$show-baseline-grid-backgrounds : false;
+$show-grid-backgrounds          : false;
+
+// Compass Variables ---------------------------------------------------------
+
+$base-font-size: 16px;
+$base-line-height: 28px;
+
+// Colors --------------------------------------------------------------------
+
+$default-color          : rgb(50,50,50);
+$default-color-light    : lighten($default-color, 25%);
+$default-color-lighter  : lighten($default-color, 50%);
+$default-color-lightest : lighten($default-color, 75%);
+$highlight-color        : #900;
+
+

@@ -1,14 +1,22 @@
 @mixin kicker {
-  font-style:italic;
-  color: $default-color-lighter;
+  @include sans-serif;
+  margin-bottom:0.25em;
+  line-height: 1.25;
+  font-size:0.6em !important;
+  color: rgba(0,0,0,0.5);
+  font-weight:bold;
+
+  & + * {
+    margin-top:0;
+  }
 }
 
 @mixin sans-serif {
-  font-family: Verdana, sans-serif;
+  font-family:"Cabin", "Lucida Grande", Verdana, sans-serif;
 }
 
 @mixin serif {
-  font-family: Georgia, serif;
+  font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
 }
 
 @mixin monospace {
@@ -36,4 +44,42 @@
 }
 
 @mixin vertical-nav {
+}
+
+@mixin button {
+  @include sans-serif;
+  text-align:center;
+  text-decoration:none;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+  
+  color: #fff;
+  
+  background-color: rgb(115,35,155);
+
+  @include background-image(
+    linear-gradient(
+      rgba(255,255,255,0),
+      rgba(255,255,255, 0.15)
+    )
+  );
+
+  @include box-shadow(rgba(255,255,255,0.375) 0 1px 0 0 inset);
+
+  border: 1px solid rgba(0,0,0,0.15) !important;  
+  @include border-radius(5px);
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  
+  &, .ie & {
+    *zoom: 1;
+  }
 }
