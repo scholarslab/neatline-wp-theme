@@ -40,7 +40,7 @@ if ($neatlinePlugins->have_posts()) : ?>
   <li id="neatline-try-it"><a href="http://neatline.scholarslab.org" class="button" title="Try out Neatline.">Try It!</a></li>
   <li id="neatline-see-it"><a href="#" class="button" title="View some example exhibits of Neatline in action.">See It!</a></li>
 </ul>
-<p id="separate-components-note">You can also use Neatline components separately.</p>
+<div id="separate-components-note"><p>You can also use Neatline components separately.</p></div>
 <?php endif; ?>
 <?php endwhile; ?>
 </div>
