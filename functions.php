@@ -154,6 +154,14 @@ if ( function_exists('register_sidebar') ) :
         'before_title' => '<h4>',
         'after_title' => '</h4>',
     ));
+
+	 register_sidebar(array(
+		'name' => 'Single Neatline Plugin',
+        'before_widget' => '<div class="%2$s widget clearfloat">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
+        'after_title' => '</h4>',
+    ));
 endif;
 
 /**
