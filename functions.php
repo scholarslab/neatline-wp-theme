@@ -145,6 +145,13 @@ if ( function_exists('register_sidebar') ) :
         'before_widget' => '<div class="%2$s widget clearfloat">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
+        'after_title' => '</h4>'
+    ));
+	 register_sidebar(array(
+		'name' => 'Single Post',
+        'before_widget' => '<div class="%2$s widget clearfloat">',
+        'after_widget' => '</div>',
+        'before_title' => '<h4>',
         'after_title' => '</h4>',
     ));
 endif;
