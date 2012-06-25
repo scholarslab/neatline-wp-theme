@@ -204,3 +204,14 @@ function neatline_add_post_title_class($classes) {
 }
 
 add_filter('body_class', 'neatline_add_post_title_class');
+
+
+
+function menu_element_class($classes, $item){
+        if($item->ID == 225 || $item->menu_item_parent == 225) {
+            $classes[] = "menu_element";
+        }
+        return $classes;
+    }
+    
+    add_filter('nav_menu_css_class' , 'menu_element_class' , 10 , 2);
