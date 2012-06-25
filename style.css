@@ -423,13 +423,9 @@ table {
     box-sizing: border-box;
   }
 
-  body {
+  html {
     font-size: 100%;
     line-height: 1.75em;
-  }
-
-  html > body {
-    font-size: 16px;
   }
 
   html {
@@ -447,7 +443,7 @@ table {
     background-position: top left, 50% 300px;
     background-repeat: no-repeat;
     border-top: 2px solid rgba(255, 255, 255, 0.75);
-    color: #444;
+    color: #3c3c3c;
     font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
   }
 
@@ -461,11 +457,12 @@ table {
   h1 {
     font-size: 1.875em;
     line-height: 1.867em;
+    line-height: 1.313em;
     text-shadow: rgba(255, 255, 255, 0.5) -1px 0;
   }
 
   h2 {
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(60, 60, 60, 0.75);
   }
 
   article:not(:last-child):after {
@@ -473,20 +470,19 @@ table {
     clear: both;
     content: "— · —";
     text-align: center;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(60, 60, 60, 0.25);
     margin: 1.75em 0;
   }
   .blog article h1, .article article h1 {
-    font-size: 1.25em;
-    line-height: 1.4em;
+    font-size: 1.5em;
+    line-height: 1.167em;
   }
   .blog article p, .article article p {
-    font-size: 0.875em;
-    line-height: 2em;
+    font-size: 1em;
+    line-height: 1.75em;
+    line-height: 1.4em;
   }
   .single article h1, .page article h1 {
-    font-size: 1.875em;
-    line-height: 1.867em;
     margin-bottom: 0;
   }
 
@@ -495,7 +491,7 @@ table {
     color: #5a3c6e;
   }
   a:visited {
-    color: rgba(90, 60, 110, 0.7);
+    color: #754e8f;
   }
   a:hover, a:active {
     color: #ba9e06;
@@ -505,11 +501,11 @@ table {
   }
   a.button:link, a.button:visited {
     color: #fff;
-    background-color: rgba(115, 35, 155, 0.9);
+    background-color: #5a3c6e;
   }
   a.button:hover, a.button:active {
     color: #fff;
-    background-color: #73239b;
+    background-color: #3f2a4d;
   }
 
   h1 a, h2 a, h3 a {
@@ -537,7 +533,7 @@ table {
     font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
     text-align: center;
     text-decoration: none;
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: -1px -1px 0 #3c3c3c;
     color: #fff;
     background-color: #73239b;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.15)));
@@ -562,7 +558,7 @@ table {
     font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
     text-align: center;
     text-decoration: none;
-    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: -1px -1px 0 #3c3c3c;
     color: #fff;
     background-color: #73239b;
     background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.15)));
@@ -584,10 +580,10 @@ table {
 
   .kicker {
     font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
-    margin-bottom: 0.25em;
-    line-height: 1.25;
-    font-size: 0.6em !important;
-    color: rgba(0, 0, 0, 0.5);
+    font-size: 12px !important;
+    line-height: 1;
+    margin-bottom: 0;
+    color: rgba(60, 60, 60, 0.5);
     font-weight: bold;
   }
   .kicker + * {
@@ -606,17 +602,35 @@ table {
     *zoom: 1;
   }
 
+  .alignleft {
+    float: left;
+    margin-right: 1.75em;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: 1.75em;
+  }
+
+  .wp-caption-text {
+    color: rgba(60, 60, 60, 0.75);
+    font-size: 0.6em;
+  }
+
+  /**
+   * Banner Header
+   */
   header[role=banner] {
     width: 90%;
     margin: 0 auto;
-    padding: 20px 0 0;
+    padding: 1.75em 0 0;
   }
 
   #search {
     font-size: 70%;
     position: relative;
     width: 200px;
-    margin: 0 auto 1em;
+    margin: 0 auto 1.75em;
   }
   #search * {
     margin: 0;
@@ -625,6 +639,10 @@ table {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 5px 2em 5px 5px;
     margin: 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
     border-radius: 4px;
     width: 150px;
   }
@@ -651,34 +669,35 @@ table {
   }
 
   #sitenav {
+    margin: 0;
     text-align: center;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 0.75em;
     line-height: 2.333em;
     line-height: 3.5em;
-    margin: 0;
   }
   #sitenav:before {
     display: block;
     content: "";
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(60, 60, 60, 0.25);
+    border-bottom: 1px solid #fff;
   }
   #sitenav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
   }
-  #sitenav li {
+  #sitenav ul li {
     display: inline;
   }
-  #sitenav li :not(:first-child):before {
+  #sitenav ul li:not(:first-child):before {
+    color: rgba(60, 60, 60, 0.5);
     content: " · ";
     padding: 0 4px;
   }
-  #sitenav a {
+  #sitenav ul li a {
     text-decoration: none;
   }
 
@@ -688,24 +707,26 @@ table {
     padding: 0;
   }
 
+  /**
+   * Main Content
+   */
   #content {
     clear: both;
     width: 90%;
     margin: 0 auto;
     padding-bottom: 2em;
   }
-
   #content:before {
     display: block;
     content: "";
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid white;
+    border-top: 1px solid rgba(60, 60, 60, 0.25);
+    border-bottom: 1px solid #fff;
   }
 
   /* Homepage Styles */
   #pitch {
-    font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+    font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
   }
 
   #screenshots img {
@@ -713,14 +734,13 @@ table {
     padding: 2%;
     background: #fff;
   }
-
   #screenshots a {
     text-decoration: none;
     border: none;
   }
 
-  #screenshots .screenshot:first-child h2,
-  #screenshots .screenshot:first-child .description {
+  .screenshot:first-child h2,
+  .screenshot:first-child .description {
     display: none;
   }
 
@@ -728,16 +748,16 @@ table {
     list-style: none;
     padding-left: 0;
     text-align: center;
-    font-size: 90%;
+    font-size: 0.75em;
+    line-height: 2.333em;
+    margin-bottom: 1.75em;
   }
-
   #neatline-meta-links li {
     display: inline;
   }
-
   #neatline-meta-links li:not(:first-child):before {
     content: " | ";
-    color: rgba(0, 0, 0, 0.1);
+    color: rgba(60, 60, 60, 0.25);
     padding: 0 10px;
   }
 
@@ -745,81 +765,65 @@ table {
     clear: both;
     font-style: italic;
     text-align: center;
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 150%;
+    font-weight: normal;
+    font-size: 1.125em;
+    line-height: 1.556em;
+    line-height: 1.75em;
+    color: rgba(60, 60, 60, 0.75);
   }
-
   #separate-components-note:before {
     display: block;
     content: "";
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid white;
-    margin-bottom: 1em;
-  }
-
-  /* Post Styles */
-  .entry .alignleft {
-    float: left;
-    margin-right: 1em;
-  }
-
-  .entry .alignright {
-    float: right;
-    margin-left: 1em;
-  }
-
-  .wp-caption-text {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 0.6em;
+    border-top: 1px solid rgba(60, 60, 60, 0.25);
+    border-bottom: 1px solid #fff;
   }
 
   .plugin-links {
-    font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
+    font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
     font-size: 0.6em;
-    color: #777;
+    color: rgba(60, 60, 60, 0.75);
   }
-
   .plugin-links span:not(:first-child):before {
     content: " | ";
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(60, 60, 60, 0.75);
   }
 
-  .single article {
-    padding-top: 1em;
+  #plugin-meta p {
+    color: rgba(0, 0, 0, 0.5);
   }
 
   /* Footer
   ----------------------------------------------------------------------------*/
-  footer {
-    padding: 1.53846154em 0;
+  footer[role="contentinfo"] {
     width: 90%;
     margin: 0 auto;
     clear: both;
     font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
   }
-
-  footer:before {
+  footer[role="contentinfo"]:before {
     display: block;
     content: "";
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid white;
-    margin-bottom: 2em;
+    border-top: 1px solid rgba(60, 60, 60, 0.25);
+    border-bottom: 1px solid #fff;
   }
-
-  footer .textwidget {
+  footer[role="contentinfo"]:before {
+    margin-bottom: 1.75em;
+  }
+  footer[role="contentinfo"] .textwidget {
     color: #777;
     font-size: 0.688em;
     line-height: 2.545em;
     line-height: 1.75em;
   }
-
-  footer .widget h4 {
+  footer[role="contentinfo"] .textwidget h4 {
     display: none;
   }
 
   #slab-info ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
     font-size: 0.688em;
     line-height: 2.545em;
@@ -842,13 +846,9 @@ table {
   }
 }
 @media screen and (min-width: 480px) {
-  body {
+  html {
     font-size: 125%;
     line-height: 1.4em;
-  }
-
-  html > body {
-    font-size: 20px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -875,7 +875,6 @@ table {
     border: none;
     clear: right;
     padding-top: 3.5em;
-    margin-bottom: -1em;
   }
   #sitenav:before {
     display: none;
@@ -993,10 +992,6 @@ table {
     width: 100%;
     padding: 0.5em 0;
     text-align: center;
-  }
-
-  #plugin-meta p {
-    color: rgba(0, 0, 0, 0.5);
   }
 
   /* Plugin List */

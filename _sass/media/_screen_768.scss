@@ -21,7 +21,6 @@ header[role=banner] {
   border:none;
   clear:right;
   padding-top: rhythm(2);
-  margin-bottom: -1em;
 
   &:before {
     display:none;
@@ -151,9 +150,6 @@ form#search {
   width: 100%;
   padding:0.5em 0;
   text-align:center;
-}
-#plugin-meta p {
-  color: rgba(0,0,0,0.5);
 }
 
 /* Plugin List */

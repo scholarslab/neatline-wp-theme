@@ -13,13 +13,13 @@ html {
 
 body {
   @include background-image(
-  linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0) 10%),
-  url('images/neatline-mark-tan.png')  
+    linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0) 10%),
+    url('images/neatline-mark-tan.png')
   );
   background-position: top left, 50% 300px;
   background-repeat: no-repeat;
   border-top:2px solid rgba(255,255,255,0.75);
-  color: #444;
+  color: $default-color;
   @include serif;
 }
 
@@ -34,11 +34,12 @@ nav {
 
 h1 {
   @include adjust-font-size-to(30px);
+  @include adjust-leading-to(0.75);
   text-shadow: rgba(255,255,255,0.5) -1px 0;
 }
 
 h2 {
-  color: rgba(0,0,0,0.5);
+  color: $default-color-light;
 }
 
 article {
@@ -47,23 +48,24 @@ article {
     clear:both;
     content: "— · —";
     text-align:center;
-    color: rgba(0,0,0,0.2);
+    color: $default-color-lightest;
     margin: rhythm(1) 0;
   }
   .blog &,
   .article & {
     h1 {
-      @include adjust-font-size-to(20px);
+      @include adjust-font-size-to(24px);
     }
 
     p {
-      @include adjust-font-size-to(14px);
+      @include adjust-font-size-to(16px);
+      @include adjust-leading-to(0.8);
     }
   }
   .single &,
   .page & {
+    
     h1 {
-      @include adjust-font-size-to(30px);
       margin-bottom:0;
     }
   }
@@ -72,16 +74,16 @@ article {
 /* Links */
 a {
   &:link {
-    color: rgba(90,60,110, 1);
+    color: $link-color;
   }
 
   &:visited {
-    color: rgba(90,60,110, 0.7);
+    color: $link-color-light;
   }
 
   &:hover,
   &:active {
-    color:#ba9e06;
+    color:$link-color-alternate;
   }
 
   &.button {
@@ -90,13 +92,13 @@ a {
     &:link,
     &:visited {
       color:#fff;
-      background-color: rgba(115,35,155, 0.9);
+      background-color: $link-color; 
     }
 
     &:hover,
     &:active {
       color:#fff;
-      background-color: rgb(115,35,155);
+      background-color: darken($link-color, 10%);
     }
   }
 }
@@ -146,17 +148,35 @@ button,
   @include clearfix;
 }
 
+.alignleft {
+  float:left;
+  margin-right: rhythm(1);
+}
+
+.alignright {
+  float:right;
+  margin-left: rhythm(1);
+}
+
+.wp-caption-text {
+  color: $default-color-light;
+  font-size: 0.6em;
+}
+
+/**
+ * Banner Header
+ */
 header[role=banner] {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0 0;
+  padding: rhythm(1) 0 0;
 }
 
 #search {
   font-size: 70%;
   position:relative;
   width: 200px;
-  margin: 0 auto 1em;;
+  margin: 0 auto rhythm(1);
   
   * {
     margin:0;
@@ -166,7 +186,7 @@ header[role=banner] {
     border:1px solid rgba(0,0,0,0.1);
     padding: 5px 2em 5px 5px;
     margin:0;
-    border-radius: 4px;
+    @include border-radius(4px);
     width: 150px;
   }
 
@@ -193,40 +213,17 @@ header[role=banner] {
       background-color: rgba(120,120,120,0.9);
     }
   }
-
 }
 
 #sitenav {
+  margin:0;  
   text-align:center;
-  border-top: 1px solid rgba(0,0,0,0.1);
   text-transform:uppercase;
   letter-spacing: 1px;
   @include adjust-font-size-to(12px);
   @include adjust-leading-to(2);
-  margin:0;
-
-  &:before {
-    display:block;
-    content:"";
-    height:0;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    border-bottom: 1px solid rgba(255,255,255,1);
-  }
-
-  ul {
-    margin:0; padding:0;
-  }
-
-  li {
-    display:inline;
-    :not(:first-child):before {
-      content: " · ";
-      padding: 0 4px;
-    }
-  }
-  a {
-    text-decoration:none;
-  }
+  @include beveled-line;
+  @include horizontal-nav;
 }
 
 #logo {
@@ -235,140 +232,119 @@ header[role=banner] {
   padding:0;
 }
 
+/**
+ * Main Content
+ */
 #content {
   clear:both;
   width: 90%;
   margin: 0 auto;
   padding-bottom: 2em;
-}
 
-#content:before {
-  display:block;
-  content:"";
-  height:0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,1);
-}
+  @include beveled-line;
+}  
 
 /* Homepage Styles */
 #pitch {
-  font-family: 'Crimson Text', Georgia, "Times New Roman", Times, serif;
+  @include serif;
 }
 
-#screenshots img {
-  max-width: 94%;
-  padding:2%;
-  background: #fff;
+#screenshots {
+  img {
+    max-width: 94%;
+    padding:2%;
+    background: #fff;
+  }
+
+  a {
+    text-decoration:none;
+    border:none;
+  }
 }
 
-#screenshots a {
-  text-decoration:none;
-  border:none;
-}
-
-#screenshots .screenshot:first-child h2,
-#screenshots .screenshot:first-child .description {
-  display:none;
+.screenshot {
+  &:first-child {
+    h2,
+    .description {
+      display:none;
+    }
+  }
 }
 
 #neatline-meta-links {
   list-style:none;
   padding-left:0;
   text-align:center;
-  font-size: 90%;
-}
+  @include adjust-font-size-to(12px);
+  margin-bottom: rhythm(1);
 
-#neatline-meta-links li {
-  display:inline;
-}
-
-#neatline-meta-links li:not(:first-child):before {
-  content: " | ";
-  color: rgba(0,0,0,0.1);
-  padding: 0 10px;
+  li {
+    display:inline;
+    &:not(:first-child):before {
+      content: " | ";
+      color: $default-color-lightest;
+      padding: 0 10px;
+    }
+  }
 }
 
 #separate-components-note {
   clear:both;
   font-style:italic;
   text-align:center;
-  color: rgba(0,0,0,0.7);
-  font-size:150%;
-}
-
-#separate-components-note:before {
-  display:block;
-  content:"";
-  height:0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,1);
-  margin-bottom:1em;
-}
-
-/* Post Styles */
-.entry .alignleft {
-  float:left;
-  margin-right: 1em;
-}
-
-.entry .alignright {
-  float:right;
-  margin-left: 1em;
-}
-
-.wp-caption-text {
-  color: rgba(0,0,0,0.5);
-  font-size: 0.6em;
+  font-weight:normal;
+  @include adjust-font-size-to(18px);
+  @include adjust-leading-to(1); 
+  color: $default-color-light;
+  @include beveled-line;
 }
 
 .plugin-links {
-  font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
+  @include serif;
   font-size: 0.6em;
-  color: #777;
+  color: $default-color-light;
+
+  span:not(:first-child):before {
+    content: " | ";
+    color: $default-color-light;
+  }
 }
 
-.plugin-links span:not(:first-child):before {
-  content: " | ";
-  color: rgba(0,0,0,0.2);
-}
-
-.single article {
-  padding-top:1em;
+#plugin-meta {
+  p {
+    color: rgba(0,0,0,0.5);
+  }
 }
 
 /* Footer
 ----------------------------------------------------------------------------*/
-footer {
-  padding: 1.53846154em 0;
+footer[role="contentinfo"] {
   width: 90%;
   margin:0 auto;
   clear:both;
-  font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;    
+  @include sans-serif;
+  @include beveled-line;
+  &:before {
+    margin-bottom: rhythm(1);
+  }
+  .textwidget {
+    color: #777;
+    @include adjust-font-size-to(11px);
+    @include adjust-leading-to(1);    
+    h4 {
+      display:none;
+    }
+  }
 }
 
-footer:before {
-  display:block;
-  content:"";
-  height:0;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  border-bottom: 1px solid rgba(255,255,255,1);
-  margin-bottom: 2em;
-}
-
-footer .textwidget {
-  color: #777;
-  @include adjust-font-size-to(11px);
-  @include adjust-leading-to(1);    
-}
-
-footer .widget h4 {
-  display:none;
-}
-
-#slab-info ul {
-  list-style:none;
-  @include adjust-font-size-to(11px);
-  @include adjust-leading-to(1);    
+#slab-info {
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+    @include adjust-font-size-to(11px);
+    @include adjust-leading-to(1);    
+  }
 }
 
 #slab-logo {

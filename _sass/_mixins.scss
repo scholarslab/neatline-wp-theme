@@ -1,14 +1,15 @@
 @mixin kicker {
   @include sans-serif;
-  margin-bottom:0.25em;
-  line-height: 1.25;
-  font-size:0.6em !important;
-  color: rgba(0,0,0,0.5);
+  font-size: 12px !important;
+  line-height: 1;
+  margin-bottom:0;
+  color: $default-color-lighter;
   font-weight:bold;
-
+  
   & + * {
     margin-top:0;
   }
+
 }
 
 @mixin sans-serif {
@@ -41,16 +42,36 @@
 }
 
 @mixin horizontal-nav {
+  ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+
+    li {
+      display:inline;
+      
+      &:not(:first-child):before {
+        color: $default-color-lighter;
+        content: " · ";
+        padding: 0 4px;
+      }
+
+      a {
+        text-decoration:none;
+      }
+    }
+  }
 }
 
 @mixin vertical-nav {
+
 }
 
 @mixin button {
   @include sans-serif;
   text-align:center;
   text-decoration:none;
-  text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+  text-shadow: -1px -1px 0 $default-color;
   
   color: #fff;
   
@@ -83,3 +104,14 @@
     *zoom: 1;
   }
 }
+
+@mixin beveled-line($placement: before) {
+  &:#{$placement} {
+    display:block;
+    content:"";
+    height:0;
+    border-top: 1px solid $default-color-lightest;
+    border-bottom: 1px solid #fff;
+  }
+}
+

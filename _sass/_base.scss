@@ -18,15 +18,18 @@ $show-grid-backgrounds          : false;
 
 // Compass Variables ---------------------------------------------------------
 
-$base-font-size: 16px;
-$base-line-height: 28px;
+$base-font-size                 : 16px;
+$base-line-height               : 28px;
 
 // Colors --------------------------------------------------------------------
 
-$default-color          : rgb(50,50,50);
-$default-color-light    : lighten($default-color, 25%);
-$default-color-lighter  : lighten($default-color, 50%);
-$default-color-lightest : lighten($default-color, 75%);
-$highlight-color        : #900;
+$default-color                  : rgb(60,60,60);
+$default-color-light            : rgba($default-color, 0.75);
+$default-color-lighter          : rgba($default-color, 0.5);
+$default-color-lightest         : rgba($default-color, 0.25);
 
+$link-color                     : rgb(90,60,110);
+$link-color-light               : lighten($link-color, 10%);
+$link-color-alternate           : rgb(186, 158, 6);
+$link-color-alternate-light     : lighten($link-color-alternate, 10%);
 
