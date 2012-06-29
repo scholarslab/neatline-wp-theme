@@ -77,9 +77,10 @@ form#search {
     }
 
     &:first-child {
-      float:none;
-      width: auto;
-      padding: 2%;
+      float:left;
+      width: 63%;
+      padding: 2% 2% 0;
+      margin-bottom: 2em;
     }
 
     &:last-child {
@@ -92,6 +93,32 @@ form#search {
       max-width: 100%;
       background: transparent;
     }
+  }
+}
+
+#neatline-meta-links {
+  float:right;
+  width: 32%;
+  margin:0;
+  clear:none;
+  text-align:left;
+  @include adjust-font-size-to(16px);
+  
+  li {
+    display:block;
+    margin-bottom: 2em;
+    &:before {
+      content: "" !important;
+      padding: 0 !important;
+    }
+
+    a {
+      display:block;
+      padding: 0 0 0 0.5em;
+      margin: 0.5em 0;
+      line-height:1em;
+      border-left:1em solid rgba(0,0,0,0.1) !important;
+    }    
   }
 }
 

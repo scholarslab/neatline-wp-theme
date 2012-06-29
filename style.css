@@ -923,9 +923,10 @@ table {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   #screenshots .screenshot:first-child {
-    float: none;
-    width: auto;
-    padding: 2%;
+    float: left;
+    width: 63%;
+    padding: 2% 2% 0;
+    margin-bottom: 2em;
   }
   #screenshots .screenshot:last-child {
     margin-right: 0 !important;
@@ -935,6 +936,31 @@ table {
     margin-bottom: 1em;
     max-width: 100%;
     background: transparent;
+  }
+
+  #neatline-meta-links {
+    float: right;
+    width: 32%;
+    margin: 0;
+    clear: none;
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.75em;
+  }
+  #neatline-meta-links li {
+    display: block;
+    margin-bottom: 2em;
+  }
+  #neatline-meta-links li:before {
+    content: "" !important;
+    padding: 0 !important;
+  }
+  #neatline-meta-links li a {
+    display: block;
+    padding: 0 0 0 0.5em;
+    margin: 0.5em 0;
+    line-height: 1em;
+    border-left: 1em solid rgba(0, 0, 0, 0.1) !important;
   }
 
   #separate-components-note {
