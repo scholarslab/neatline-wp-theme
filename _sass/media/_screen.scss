@@ -21,6 +21,11 @@ body {
   border-top:2px solid rgba(255,255,255,0.75);
   color: $default-color;
   @include serif;
+
+  ul li {
+    margin-bottom:1em;
+  }
+
 }
 
 nav {
