@@ -446,9 +446,6 @@ table {
     color: #3c3c3c;
     font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
   }
-  body ul li {
-    margin-bottom: 1em;
-  }
 
   nav ul,
   nav ol {
@@ -482,6 +479,9 @@ table {
   }
   .single article h1, .page article h1 {
     margin-bottom: 0;
+  }
+  article ul li {
+    margin-bottom: 1em;
   }
 
   /* Links */

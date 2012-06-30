@@ -22,10 +22,6 @@ body {
   color: $default-color;
   @include serif;
 
-  ul li {
-    margin-bottom:1em;
-  }
-
 }
 
 nav {
@@ -68,6 +64,11 @@ article {
       margin-bottom:0;
     }
   }
+
+  ul li {
+    margin-bottom:1em;
+  }
+
 }
 
 /* Links */
