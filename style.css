@@ -724,6 +724,14 @@ table {
     border-top: 1px solid rgba(60, 60, 60, 0.25);
     border-bottom: 1px solid #fff;
   }
+  #content img.splash {
+    border: 5px solid #584561;
+    border-radius: 2px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+  }
+  #content img.splash:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
+  }
 
   /* Homepage Styles */
   #pitch {

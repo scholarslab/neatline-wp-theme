@@ -12,6 +12,8 @@ Template Name: Homepage
     </div>
 <?php endwhile; endif; ?>
 
+<img class="splash" src="http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg" />
+
 <!--
 <?php
 // Loop through our Neatline Plugins posts

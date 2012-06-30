@@ -178,7 +178,7 @@ header[role=banner] {
   position:relative;
   width: 200px;
   margin: 0 auto rhythm(1);
-  
+
   * {
     margin:0;
   }
@@ -247,6 +247,16 @@ header[role=banner] {
   padding-bottom: 2em;
 
   @include beveled-line;
+
+  img.splash {
+    border: 5px solid #584561;
+    border-radius: 2px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+    &:hover {
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
+    }
+  }
+
 }
 
 /* Homepage Styles */
