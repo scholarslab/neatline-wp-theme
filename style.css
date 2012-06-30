@@ -580,6 +580,7 @@ table {
     margin-bottom: 0;
     color: rgba(60, 60, 60, 0.5);
     font-weight: bold;
+    margin-bottom: 0.5em;
   }
   .kicker + * {
     margin-top: 0;
