@@ -216,7 +216,7 @@ header[role=banner] {
 }
 
 #sitenav {
-  margin:0;  
+  margin:0;
   text-align:center;
   text-transform:uppercase;
   letter-spacing: 1px;
@@ -227,9 +227,13 @@ header[role=banner] {
 }
 
 #logo {
-  text-align:center;
   margin:0;
   padding:0;
+
+  img {
+    max-width: 70%;
+  }
+
 }
 
 /**

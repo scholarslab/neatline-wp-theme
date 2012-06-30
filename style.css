@@ -702,9 +702,11 @@ table {
   }
 
   #logo {
-    text-align: center;
     margin: 0;
     padding: 0;
+  }
+  #logo img {
+    max-width: 70%;
   }
 
   /**
@@ -871,10 +873,9 @@ table {
   }
 
   #sitenav {
-    float: right;
+    float: left;
     border: none;
-    clear: right;
-    padding-top: 3.5em;
+    padding-top: 1em;
   }
   #sitenav:before {
     display: none;
@@ -905,7 +906,7 @@ table {
     float: right;
     clear: right;
     text-align: right;
-    margin: 0;
+    margin: 1.85em 0 0 0;
   }
 
   #screenshots .screenshot {
