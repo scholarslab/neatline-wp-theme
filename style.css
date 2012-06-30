@@ -465,12 +465,7 @@ table {
     color: rgba(60, 60, 60, 0.75);
   }
 
-  article:not(:last-child):after {
-    display: block;
-    clear: both;
-    content: "— · —";
-    text-align: center;
-    color: rgba(60, 60, 60, 0.25);
+  article {
     margin: 1.75em 0;
   }
   .blog article h1, .article article h1 {
@@ -1023,6 +1018,8 @@ table {
     display: block;
     float: left;
     width: 48%;
+    border: 17px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   }
   .archive article.plugins .content {
     float: right;

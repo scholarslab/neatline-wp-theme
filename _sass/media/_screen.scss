@@ -43,14 +43,8 @@ h2 {
 }
 
 article {
-  &:not(:last-child):after{
-    display:block;
-    clear:both;
-    content: "— · —";
-    text-align:center;
-    color: $default-color-lightest;
-    margin: rhythm(1) 0;
-  }
+  margin: rhythm(1) 0;
+
   .blog &,
   .article & {
     h1 {
@@ -64,7 +58,7 @@ article {
   }
   .single &,
   .page & {
-    
+
     h1 {
       margin-bottom:0;
     }

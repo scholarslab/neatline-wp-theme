@@ -8,9 +8,13 @@ $image = $image[0];
 ?>
 
 <h2><?php the_title(); ?></h2>
+
 <?php if ($image) : ?>
-<a href="<?php the_permalink(); ?>" class="plugin-screen"><img src="<?php echo $image; ?>" alt="<?php the_title_attribute(); ?>" /></a>
+<a href="<?php the_permalink(); ?>" class="plugin-screen">
+  <img src="<?php echo $image; ?>" alt="<?php the_title_attribute(); ?>" />
+</a>
 <?php endif; ?>
+
 <div class="content">
   <?php the_excerpt(); ?>
   <p><a href="<?php the_permalink(); ?>">Learn More</a> · <a href="<?php echo $download; ?>">Download</a></p>
