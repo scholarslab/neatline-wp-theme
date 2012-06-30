@@ -1021,11 +1021,11 @@ table {
   }
   .archive article.plugins .plugin-screen {
     display: block;
-    float: right;
+    float: left;
     width: 48%;
   }
   .archive article.plugins .content {
-    float: left;
+    float: right;
     width: 48%;
   }
 

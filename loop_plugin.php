@@ -7,7 +7,7 @@ $image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'ful
 $image = $image[0];
 ?>
 
-<h1><?php the_title(); ?></h1>
+<h2><?php the_title(); ?></h2>
 <?php if ($image) : ?>
 <a href="<?php the_permalink(); ?>" class="plugin-screen"><img src="<?php echo $image; ?>" alt="<?php the_title_attribute(); ?>" /></a>
 <?php endif; ?>

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<h1 class="posttitle"><?php echo post_type_archive_title(); ?></h1>
 
     <?php if (have_posts()) :
         query_posts( $query_string . '&orderby=menu_order&order=ASC&posts_per_page=-1' );
