@@ -246,7 +246,7 @@ header[role=banner] {
   padding-bottom: 2em;
 
   @include beveled-line;
-}  
+}
 
 /* Homepage Styles */
 #pitch {
@@ -300,7 +300,7 @@ header[role=banner] {
   @include adjust-font-size-to(18px);
   @include adjust-leading-to(1); 
   color: $default-color-light;
-  @include beveled-line;
+  // @include beveled-line;
 }
 
 .plugin-links {

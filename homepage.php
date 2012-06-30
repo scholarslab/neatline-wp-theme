@@ -12,12 +12,10 @@ Template Name: Homepage
     </div>
 <?php endwhile; endif; ?>
 
+<!--
 <?php
-
 // Loop through our Neatline Plugins posts
-
 $neatlinePlugins = new WP_Query(array('post_type' => 'plugins', 'order_by' => 'menu_order'));
-
 if ($neatlinePlugins->have_posts()) : ?>
 
 <div id="screenshots" class="container">
@@ -44,6 +42,7 @@ if ($neatlinePlugins->have_posts()) : ?>
 <?php endif; ?>
 <?php endwhile; ?>
 </div>
+-->
 
 <?php wp_reset_query(); endif; ?>
 
