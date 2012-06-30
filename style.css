@@ -861,7 +861,7 @@ table {
   }
 
   header[role=banner] {
-    padding: 1.75em 0;
+    padding: 1.75em 0 1em 0;
   }
 
   #logo {
