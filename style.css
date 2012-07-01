@@ -483,6 +483,9 @@ table {
   article ul li {
     margin-bottom: 1em;
   }
+  article .secondary ul li {
+    margin-bottom: 0;
+  }
 
   /* Links */
   a:link {

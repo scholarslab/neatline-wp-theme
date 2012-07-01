@@ -5,7 +5,7 @@
   margin-bottom:0;
   color: $default-color-lighter;
   font-weight:bold;
-  
+
   & + * {
     margin-top:0;
   }
@@ -49,7 +49,7 @@
 
     li {
       display:inline;
-      
+
       &:not(:first-child):before {
         color: $default-color-lighter;
         content: " · ";
