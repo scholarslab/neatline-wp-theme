@@ -8,12 +8,12 @@
 
 html {
   background: #f9f9f9 url(images/bg_wrapper.jpg);
-  border-top: 10px solid rgba(90,60,110, 1);
+  border-top: 10px solid #573D56;
 }
 
 body {
   @include background-image(
-    linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0) 10%),
+    linear-gradient(rgba(0,0,0,0.1) 0px, rgba(0,0,0,0) 200px),
     url('images/neatline-mark-tan.png')
   );
   background-position: top left, 50% 300px;
@@ -248,13 +248,18 @@ header[role=banner] {
 
   @include beveled-line;
 
-  img.splash {
+  div.splash {
+    background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg');
+    background-size: 100%;
+    width: 970px;
+    height: 420px;
     border: 5px solid #584561;
     border-radius: 2px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
     &:hover {
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
     }
+
   }
 
 }
