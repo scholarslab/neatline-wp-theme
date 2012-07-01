@@ -16,7 +16,7 @@ Template Name: Homepage
 <ul id="neatline-meta-links">
   <li id="neatline-try-it"><a href="http://sandbox.neatline.org" title="Try out Neatline.">Live Sandbox</a></li>
   <li id="neatline-learn-more"><a href="/plugins/neatline" title="Learn more about the Neatline plugin." class="middle">Download</a></li>
-  <li id="neatline-see-it"><a href="/neatline-in-action/" title="View some example exhibits of Neatline in action.">Demo Exhibits</a></li>
+  <li id="neatline-see-it"><a href="/neatline-in-action/" title="See Neatline in action.">Demo Exhibits</a></li>
 </ul>
 
 <!--
