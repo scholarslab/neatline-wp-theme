@@ -784,6 +784,12 @@ table {
   #content a.splash-link div.splash.anie {
     background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg");
   }
+  #content a.splash-link div.splash.henshaw {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/henshaw.jpg");
+  }
+  #content a.splash-link div.splash.lovecraft {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/lovecraft.jpg");
+  }
 
   /* Homepage Styles */
   #pitch {
@@ -855,6 +861,9 @@ table {
   .neatline-in-action div.exhibit {
     margin-bottom: 1em;
     border-bottom: 1px solid rgba(60, 60, 60, 0.25);
+  }
+  .neatline-in-action div.exhibit:last-child {
+    border-bottom: none;
   }
 
   /* Footer
