@@ -299,6 +299,24 @@ header[role=banner] {
       &.hotchkiss {
         background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg');
       }
+      &.nelly {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/nelly.jpg');
+      }
+      &.num132 {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/132.jpg');
+      }
+      &.num138 {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/138.jpg');
+      }
+      &.uva {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/uva.jpg');
+      }
+      &.tech {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/tech.jpg');
+      }
+      &.anie {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg');
+      }
 
     }
 
@@ -378,6 +396,22 @@ header[role=banner] {
   }
 }
 
+/* Neatline in Action content styles. */
+.neatline-in-action {
+
+  p {
+    margin: 1em;
+    font-size: 18px;
+  }
+
+  div.exhibit {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.25);
+  }
+
+}
+
+
 /* Footer
 ----------------------------------------------------------------------------*/
 footer[role="contentinfo"] {
@@ -392,7 +426,7 @@ footer[role="contentinfo"] {
   .textwidget {
     color: #777;
     @include adjust-font-size-to(11px);
-    @include adjust-leading-to(1);    
+    @include adjust-leading-to(1);
     h4 {
       display:none;
     }

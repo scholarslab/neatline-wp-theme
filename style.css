@@ -766,6 +766,24 @@ table {
   #content a.splash-link div.splash.hotchkiss {
     background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg");
   }
+  #content a.splash-link div.splash.nelly {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/nelly.jpg");
+  }
+  #content a.splash-link div.splash.num132 {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/132.jpg");
+  }
+  #content a.splash-link div.splash.num138 {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/138.jpg");
+  }
+  #content a.splash-link div.splash.uva {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/uva.jpg");
+  }
+  #content a.splash-link div.splash.tech {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/tech.jpg");
+  }
+  #content a.splash-link div.splash.anie {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg");
+  }
 
   /* Homepage Styles */
   #pitch {
@@ -827,6 +845,16 @@ table {
 
   #plugin-meta p {
     color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Neatline in Action content styles. */
+  .neatline-in-action p {
+    margin: 1em;
+    font-size: 18px;
+  }
+  .neatline-in-action div.exhibit {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.25);
   }
 
   /* Footer
