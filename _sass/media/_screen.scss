@@ -254,16 +254,45 @@ header[role=banner] {
 
   @include beveled-line;
 
-  div.splash {
-    background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg');
-    background-size: 100%;
-    width: 970px;
-    height: 420px;
-    border: 5px solid #584561;
-    border-radius: 2px;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
-    &:hover {
-      box-shadow: 0 0 50px rgba(0, 0, 0, 0.45);
+  a.splash-link {
+    text-decoration: none;
+
+    div.splash {
+      background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg');
+      background-size: 100%;
+      width: 970px;
+      height: 420px;
+      border: 5px solid #584561;
+      border-radius: 2px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+
+      div.launch-overlay {
+        display: none;
+        background-color: rgba(0,0,0,0.15);
+        text-align: center;
+        height: 100%;
+
+        div.launch-button {
+          position: relative;
+          color: white;
+          font-size: 2em;
+          font-style: italic;
+          text-decoration: none;
+          top: 200px;
+        }
+
+      }
+
+      &:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.50);
+
+        div.launch-overlay {
+          display: block;
+        }
+
+      }
+
     }
 
   }

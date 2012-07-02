@@ -116,6 +116,16 @@
 }
 
 @mixin splash-button {
+  padding: 0 1em;
+  margin: 0.5em 0.6em;
+  line-height: 1em;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 1.25em;
+  line-height: 1.4em;
+  padding: 10px 15px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   background-color: hsl(299, 17%, 28%) !important;
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#644765", endColorstr="#533b53");
