@@ -731,10 +731,9 @@ table {
     text-decoration: none;
   }
   #content a.splash-link div.splash {
-    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg");
     background-size: 100%;
     width: 970px;
-    height: 420px;
+    height: 447px;
     border: 5px solid #584561;
     border-radius: 2px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
@@ -759,6 +758,13 @@ table {
   }
   #content a.splash-link div.splash:hover div.launch-overlay {
     display: block;
+  }
+  #content a.splash-link div.splash.homepage {
+    height: 420px;
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg");
+  }
+  #content a.splash-link div.splash.hotchkiss {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg");
   }
 
   /* Homepage Styles */

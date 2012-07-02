@@ -13,7 +13,7 @@ Template Name: Homepage
 <?php endwhile; endif; ?>
 
 <a href="http://hotchkiss.neatline.org/neatline-exhibits/show/battle-of-chancellorsville/fullscreen" target="_blank" class="splash-link">
-  <div class="splash">
+  <div class="splash homepage">
     <div class="launch-overlay">
       <div class="launch-button">Launch Exhibit</div>
     </div>
