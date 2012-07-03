@@ -447,6 +447,16 @@ table {
     font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
   }
 
+  form {
+    font-size: 0.75em;
+    line-height: 2.333em;
+    line-height: 1.75em;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
   nav ul,
   nav ol {
     list-style: none;
@@ -463,6 +473,9 @@ table {
 
   h2 {
     color: rgba(60, 60, 60, 0.75);
+    font-size: 1.125em;
+    line-height: 1.556em;
+    line-height: 1.75em;
   }
 
   article {
@@ -866,6 +879,72 @@ table {
   }
   .neatline-in-action div.exhibit:last-child {
     border-bottom: none;
+  }
+
+  #comments {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  }
+
+  .commentlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75em;
+    line-height: 2.333em;
+    line-height: 1.75em;
+  }
+  .commentlist li {
+    margin-bottom: 3.5em;
+  }
+  .commentlist li ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.75em;
+  }
+  .commentlist li ul li.comment {
+    border-left: 1px dotted rgba(0, 0, 0, 0.1);
+    padding-left: 1.75em;
+    margin: 3.5em 0;
+  }
+  .commentlist article {
+    margin: 0;
+  }
+  .commentlist .comment-meta {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: table;
+  }
+  .commentlist .comment-meta li {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .commentlist .comment-meta li:not(:last-child):after {
+    color: rgba(60, 60, 60, 0.5);
+    content: " · ";
+    padding: 0 0.5em;
+  }
+  .commentlist .comment-meta li:first-child:after {
+    content: "" !important;
+    padding: 0 1em 0 0;
+  }
+  .commentlist .comment-meta li .image {
+    width: 40px;
+  }
+  .commentlist .comment-meta li img {
+    width: 40px;
+    height: 40px;
+  }
+  .commentlist .comment-meta li a {
+    text-decoration: none;
+  }
+
+  #respond {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+  }
+  #respond input,
+  #respond textarea {
+    display: block;
   }
 
   /* Footer

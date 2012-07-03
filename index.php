@@ -8,6 +8,7 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <?php include (TEMPLATEPATH . '/loop.php'); ?>
+    <?php if(is_single()): comments_template(); endif; ?>
 
     <?php endwhile; ?>
 
