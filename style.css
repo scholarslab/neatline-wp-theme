@@ -430,16 +430,16 @@ table {
 
   html {
     background: #f9f9f9 url(images/bg_wrapper.jpg);
-    border-top: 10px solid #5a3c6e;
+    border-top: 10px solid #573D56;
   }
 
   body {
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(10%, rgba(0, 0, 0, 0))), url("images/neatline-mark-tan.png");
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%), url("images/neatline-mark-tan.png");
-    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%), url("images/neatline-mark-tan.png");
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%), url("images/neatline-mark-tan.png");
-    background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%), url("images/neatline-mark-tan.png");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 10%), url("images/neatline-mark-tan.png");
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 200, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0))), url("images/neatline-mark-tan.png");
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0) 200px), url("images/neatline-mark-tan.png");
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0) 200px), url("images/neatline-mark-tan.png");
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0) 200px), url("images/neatline-mark-tan.png");
+    background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0) 200px), url("images/neatline-mark-tan.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0) 200px), url("images/neatline-mark-tan.png");
     background-position: top left, 50% 300px;
     background-repeat: no-repeat;
     border-top: 2px solid rgba(255, 255, 255, 0.75);
@@ -465,12 +465,7 @@ table {
     color: rgba(60, 60, 60, 0.75);
   }
 
-  article:not(:last-child):after {
-    display: block;
-    clear: both;
-    content: "— · —";
-    text-align: center;
-    color: rgba(60, 60, 60, 0.25);
+  article {
     margin: 1.75em 0;
   }
   .blog article h1, .article article h1 {
@@ -483,6 +478,12 @@ table {
     line-height: 1.4em;
   }
   .single article h1, .page article h1 {
+    margin-bottom: 0;
+  }
+  article ul li {
+    margin-bottom: 1em;
+  }
+  article .secondary ul li {
     margin-bottom: 0;
   }
 
@@ -585,6 +586,7 @@ table {
     margin-bottom: 0;
     color: rgba(60, 60, 60, 0.5);
     font-weight: bold;
+    margin-bottom: 0.5em;
   }
   .kicker + * {
     margin-top: 0;
@@ -704,9 +706,9 @@ table {
   #logo {
     margin: 0;
     padding: 0;
-  }
-  #logo img {
-    max-width: 70%;
+    text-align: center;
+    font-size: 0.75em;
+    line-height: 2.333em;
   }
 
   /**
@@ -724,6 +726,71 @@ table {
     height: 0;
     border-top: 1px solid rgba(60, 60, 60, 0.25);
     border-bottom: 1px solid #fff;
+  }
+  #content a.splash-link {
+    text-decoration: none;
+  }
+  #content a.splash-link div.splash {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 420px;
+    border: 5px solid #584561;
+    border-radius: 2px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+  }
+  #content a.splash-link div.splash div.launch-overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    height: 100%;
+  }
+  #content a.splash-link div.splash div.launch-overlay div.launch-button {
+    position: relative;
+    color: white;
+    font-size: 2em;
+    font-style: italic;
+    text-decoration: none;
+    top: 200px;
+  }
+  #content a.splash-link div.splash:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  }
+  #content a.splash-link div.splash:hover div.launch-overlay {
+    display: block;
+  }
+  #content a.splash-link div.splash.homepage {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg");
+  }
+  #content a.splash-link div.splash.hotchkiss {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg");
+  }
+  #content a.splash-link div.splash.nelly {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/nelly.jpg");
+  }
+  #content a.splash-link div.splash.num132 {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/132.jpg");
+  }
+  #content a.splash-link div.splash.num138 {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/138.jpg");
+  }
+  #content a.splash-link div.splash.uva {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/uva.jpg");
+  }
+  #content a.splash-link div.splash.tech {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/tech.jpg");
+  }
+  #content a.splash-link div.splash.anie {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg");
+  }
+  #content a.splash-link div.splash.henshaw {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/henshaw1.jpg");
+  }
+  #content a.splash-link div.splash.lovecraft {
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/lovecraft.jpg");
   }
 
   /* Homepage Styles */
@@ -773,13 +840,6 @@ table {
     line-height: 1.75em;
     color: rgba(60, 60, 60, 0.75);
   }
-  #separate-components-note:before {
-    display: block;
-    content: "";
-    height: 0;
-    border-top: 1px solid rgba(60, 60, 60, 0.25);
-    border-bottom: 1px solid #fff;
-  }
 
   .plugin-links {
     font-family: "Crimson Text", Georgia, "Times New Roman", Times, serif;
@@ -793,6 +853,19 @@ table {
 
   #plugin-meta p {
     color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Neatline in Action content styles. */
+  .neatline-in-action p {
+    margin: 1em;
+    font-size: 18px;
+  }
+  .neatline-in-action div.exhibit {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.25);
+  }
+  .neatline-in-action div.exhibit:last-child {
+    border-bottom: none;
   }
 
   /* Footer
@@ -824,16 +897,18 @@ table {
   }
 
   #slab-info ul {
-    margin: 0;
+    margin: 0 0 1.75em;
     padding: 0;
     list-style: none;
     font-size: 0.688em;
     line-height: 2.545em;
     line-height: 1.75em;
+    float: left;
   }
 
   #slab-logo {
     opacity: 0.5;
+    float: right;
   }
 
   .not-yet {
@@ -861,21 +936,27 @@ table {
   }
 
   header[role=banner] {
-    padding: 1.75em 0 1em 0;
+    position: relative;
+    padding: 1.75em 0 0;
   }
 
   #logo {
     float: left;
-    width: 40%;
-    margin: 0;
-    line-height: 1;
-    padding: 0;
+    text-align: left;
+    max-width: 300px;
+    line-height: 0;
+    margin-bottom: 1.75em;
   }
 
   #sitenav {
-    float: left;
+    position: absolute;
+    bottom: 1.75em;
+    right: 0;
+    float: right;
+    clear: right;
     border: none;
-    padding-top: 1em;
+    text-align: right;
+    line-height: 1.75em;
   }
   #sitenav:before {
     display: none;
@@ -883,30 +964,9 @@ table {
   #sitenav ul {
     border: none;
   }
-  #sitenav li:before {
-    content: none !important;
-    padding: 0 !important;
-  }
-  #sitenav a {
-    display: block;
-    float: left;
-    padding: 0 0.875em;
-    text-align: center;
-  }
-
-  #sitenav li:not(:first-child) a {
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  #sitenav li:not(:last-child) a {
-    border-right: 2px solid rgba(255, 255, 255, 0.5);
-  }
 
   form#search {
     float: right;
-    clear: right;
-    text-align: right;
-    margin: 1.85em 0 0 0;
   }
 
   #screenshots .screenshot {
@@ -940,16 +1000,14 @@ table {
   }
 
   #neatline-meta-links {
-    float: right;
-    width: 22%;
-    margin: 0;
+    margin: 2em 0 0 0;
     clear: none;
-    text-align: left;
+    text-align: center;
     font-size: 1em;
     line-height: 1.75em;
   }
   #neatline-meta-links li {
-    display: block;
+    display: inline;
     margin-bottom: 2em;
   }
   #neatline-meta-links li:before {
@@ -957,11 +1015,36 @@ table {
     padding: 0 !important;
   }
   #neatline-meta-links li a {
-    display: block;
-    padding: 0 0 0 0.5em;
-    margin: 0.5em 0;
+    padding: 0 1em;
+    margin: 0.5em 0.6em;
     line-height: 1em;
-    border-left: 1em solid rgba(0, 0, 0, 0.1) !important;
+    font-style: italic;
+    text-decoration: none;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    padding: 10px 15px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: #533b54 !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#644765", endColorstr="#533b53");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#644765), to(#533b53));
+    background-image: -moz-linear-gradient(top, #644765, #533b53);
+    background-image: -ms-linear-gradient(top, #644765, #533b53);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #644765), color-stop(100%, #533b53));
+    background-image: -webkit-linear-gradient(top, #644765, #533b53);
+    background-image: -o-linear-gradient(top, #644765, #533b53);
+    background-image: linear-gradient(#644765, #533b53);
+    border-color: #533b53 #533b53 #4f384f;
+    color: #fff !important;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.09);
+    -webkit-font-smoothing: antialiased;
+  }
+  #neatline-meta-links li a:hover {
+    text-decoration: underline;
+  }
+  #neatline-meta-links li a.middle {
+    font-size: 2em;
   }
 
   #separate-components-note {
@@ -1028,11 +1111,16 @@ table {
   }
   .archive article.plugins .plugin-screen {
     display: block;
-    float: right;
+    float: left;
     width: 48%;
+    border: 17px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  .archive article.plugins .plugin-screen:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
   .archive article.plugins .content {
-    float: left;
+    float: right;
     width: 48%;
   }
 
@@ -1075,12 +1163,14 @@ table {
   #slab-info #slab-logo {
     display: table-cell;
     vertical-align: middle;
+    margin: 0;
   }
   #slab-info #slab-logo {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     padding: 0;
+    float: none;
   }
 }
 @media print {

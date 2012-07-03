@@ -47,7 +47,7 @@
         </a>
     </h1>
     <form method="get" id="search" action="<?php bloginfo('url'); ?>/">
-	    <input class="input" placeholder="Search Neatline.org" type="search" value="<?php the_search_query(); ?>" name="s" />
+	    <input class="input" placeholder="Search" type="search" value="<?php the_search_query(); ?>" name="s" />
 	    <input class="button" type="submit" value="Search" />
     </form>
     <nav id="sitenav">

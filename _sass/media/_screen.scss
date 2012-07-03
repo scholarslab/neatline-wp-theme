@@ -8,12 +8,12 @@
 
 html {
   background: #f9f9f9 url(images/bg_wrapper.jpg);
-  border-top: 10px solid rgba(90,60,110, 1);
+  border-top: 10px solid #573D56;
 }
 
 body {
   @include background-image(
-    linear-gradient(rgba(0,0,0,0.1) 0, rgba(0,0,0,0) 10%),
+    linear-gradient(rgba(0,0,0,0.1) 0px, rgba(0,0,0,0) 200px),
     url('images/neatline-mark-tan.png')
   );
   background-position: top left, 50% 300px;
@@ -21,6 +21,7 @@ body {
   border-top:2px solid rgba(255,255,255,0.75);
   color: $default-color;
   @include serif;
+
 }
 
 nav {
@@ -43,14 +44,8 @@ h2 {
 }
 
 article {
-  &:not(:last-child):after{
-    display:block;
-    clear:both;
-    content: "— · —";
-    text-align:center;
-    color: $default-color-lightest;
-    margin: rhythm(1) 0;
-  }
+  margin: rhythm(1) 0;
+
   .blog &,
   .article & {
     h1 {
@@ -64,11 +59,22 @@ article {
   }
   .single &,
   .page & {
-    
+
     h1 {
       margin-bottom:0;
     }
   }
+
+  ul li {
+    margin-bottom:1em;
+  }
+
+  .secondary {
+    ul li {
+      margin-bottom:0;
+    }
+  }
+
 }
 
 /* Links */
@@ -141,6 +147,7 @@ button,
 
 .kicker {
   @include kicker;
+  margin-bottom:0.5em;
 }
 
 /* Utility Classes */
@@ -177,7 +184,7 @@ header[role=banner] {
   position:relative;
   width: 200px;
   margin: 0 auto rhythm(1);
-  
+
   * {
     margin:0;
   }
@@ -229,11 +236,8 @@ header[role=banner] {
 #logo {
   margin:0;
   padding:0;
-
-  img {
-    max-width: 70%;
-  }
-
+  text-align:center;
+  @include adjust-font-size-to(12px); 
 }
 
 /**
@@ -246,7 +250,81 @@ header[role=banner] {
   padding-bottom: 2em;
 
   @include beveled-line;
-}  
+
+  a.splash-link {
+    text-decoration: none;
+
+    div.splash {
+      @include background-size(cover);
+      background-repeat:no-repeat;
+      height: 420px;
+      border: 5px solid #584561;
+      border-radius: 2px;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
+      cursor: pointer;
+
+      div.launch-overlay {
+        display: none;
+        background-color: rgba(0,0,0,0.5);
+        text-align: center;
+        height: 100%;
+
+        div.launch-button {
+          position: relative;
+          color: white;
+          font-size: 2em;
+          font-style: italic;
+          text-decoration: none;
+          top: 200px;
+        }
+
+      }
+
+      &:hover {
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.50);
+
+        div.launch-overlay {
+          display: block;
+        }
+
+      }
+
+      &.homepage {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg');
+      }
+      &.hotchkiss {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg');
+      }
+      &.nelly {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/nelly.jpg');
+      }
+      &.num132 {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/132.jpg');
+      }
+      &.num138 {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/138.jpg');
+      }
+      &.uva {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/uva.jpg');
+      }
+      &.tech {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/tech.jpg');
+      }
+      &.anie {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg');
+      }
+      &.henshaw {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/henshaw1.jpg');
+      }
+      &.lovecraft {
+        background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/07/lovecraft.jpg');
+      }
+
+    }
+
+  }
+
+}
 
 /* Homepage Styles */
 #pitch {
@@ -300,7 +378,7 @@ header[role=banner] {
   @include adjust-font-size-to(18px);
   @include adjust-leading-to(1); 
   color: $default-color-light;
-  @include beveled-line;
+  // @include beveled-line;
 }
 
 .plugin-links {
@@ -320,6 +398,25 @@ header[role=banner] {
   }
 }
 
+/* Neatline in Action content styles. */
+.neatline-in-action {
+
+  p {
+    margin: 1em;
+    font-size: 18px;
+  }
+
+  div.exhibit {
+    margin-bottom: 1em;
+    border-bottom: 1px solid rgba(60, 60, 60, 0.25);
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+}
+
+
 /* Footer
 ----------------------------------------------------------------------------*/
 footer[role="contentinfo"] {
@@ -334,7 +431,7 @@ footer[role="contentinfo"] {
   .textwidget {
     color: #777;
     @include adjust-font-size-to(11px);
-    @include adjust-leading-to(1);    
+    @include adjust-leading-to(1);
     h4 {
       display:none;
     }
@@ -343,16 +440,18 @@ footer[role="contentinfo"] {
 
 #slab-info {
   ul {
-    margin:0;
+    margin:0 0 rhythm(1);
     padding:0;
     list-style:none;
     @include adjust-font-size-to(11px);
-    @include adjust-leading-to(1);    
+    @include adjust-leading-to(1);
+    float:left;
   }
 }
 
 #slab-logo {
   opacity: 0.5;
+  float:right;
 }
 
 .not-yet {
