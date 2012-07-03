@@ -731,9 +731,12 @@ table {
     text-decoration: none;
   }
   #content a.splash-link div.splash {
-    background-size: 100%;
-    width: 970px;
-    height: 447px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 420px;
     border: 5px solid #584561;
     border-radius: 2px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
@@ -760,7 +763,6 @@ table {
     display: block;
   }
   #content a.splash-link div.splash.homepage {
-    height: 420px;
     background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg");
   }
   #content a.splash-link div.splash.hotchkiss {

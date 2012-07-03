@@ -258,9 +258,9 @@ header[role=banner] {
     text-decoration: none;
 
     div.splash {
-      background-size: 100%;
-      width: 970px;
-      height: 447px;
+      @include background-size(cover);
+      background-repeat:no-repeat;
+      height: 420px;
       border: 5px solid #584561;
       border-radius: 2px;
       box-shadow: 0 0 50px rgba(0, 0, 0, 0.35);
@@ -293,7 +293,6 @@ header[role=banner] {
       }
 
       &.homepage {
-        height: 420px;
         background-image: url('http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg');
       }
       &.hotchkiss {
