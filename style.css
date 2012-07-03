@@ -499,6 +499,37 @@ table {
   article .secondary ul li {
     margin-bottom: 0;
   }
+  article .author-info {
+    border-top: 1px dotted rgba(0, 0, 0, 0.1);
+    padding-top: 1.75em;
+  }
+  article .author-info:before, article .author-info:after {
+    content: "";
+    display: table;
+  }
+  article .author-info:after {
+    clear: both;
+  }
+  article .author-info, .ie article .author-info {
+    *zoom: 1;
+  }
+  article .author-info p {
+    margin: 0;
+  }
+  article .author-info img {
+    float: left;
+    margin-right: 0.875em;
+  }
+  article .author-info .author-name {
+    font-weight: bold;
+    margin-bottom: 0.875em;
+  }
+  article .author-info .author-description,
+  article .author-info .all-posts {
+    font-size: 0.75em;
+    line-height: 2.333em;
+    line-height: 1.313em;
+  }
 
   /* Links */
   a:link {

@@ -87,6 +87,32 @@ article {
     }
   }
 
+  .author-info {
+    @include clearfix;
+    border-top:1px dotted rgba(0,0,0,0.1);
+    padding-top:rhythm(1);
+
+    p {
+      margin:0;
+    }
+
+    img {
+      float:left;
+      margin-right: rhythm(0.5);
+    }
+
+    .author-name {
+      font-weight:bold;
+      margin-bottom: rhythm(0.5);
+    }
+
+    .author-description,
+    .all-posts {
+      @include adjust-font-size-to(12px);
+      @include adjust-leading-to(0.75);
+    }
+
+  }
 }
 
 /* Links */
