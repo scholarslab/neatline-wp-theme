@@ -5,24 +5,27 @@ footer {
 }
 
 header[role=banner] {
-  padding: 1.75em 0 1em 0;
-  // padding:rhythm(1) 0;
+  position:relative;
+  padding:rhythm(1) 0 0;
 }
 
 #logo {
   float:left;
-  width: 40%;
-  margin:0;
-  line-height:1;
-  padding: 0;
+  text-align:left;
+  max-width: 300px;
+  line-height:0;
+  margin-bottom:rhythm(1);
 }
 
 #sitenav {
-  float:left;
+  position:absolute;
+  bottom:rhythm(1);
+  right:0;
+  float:right;
+  clear:right;
   border:none;
-  // clear:right;
-  // padding-top: rhythm(2);
-  padding-top:1em;
+  text-align:right;
+  @include adjust-leading-to(1);
 
   &:before {
     display:none;
@@ -32,34 +35,12 @@ header[role=banner] {
     border:none;
   }
 
-  li {
-    &:before {
-      content:none !important;
-      padding:0 !important;
-    }
-  }
-
   a {
-    display:block;
-    float:left;
-    padding: 0 rhythm(0.5);
-    text-align:center;
   }
-}
-
-#sitenav li:not(:first-child) a {
-  border-left: 1px solid rgba(0,0,0,0.1);
-}
-
-#sitenav li:not(:last-child) a {
-  border-right: 2px solid rgba(255,255,255,0.5);
 }
 
 form#search {
   float:right;
-  clear:right;
-  text-align:right;
-  margin:1.85em 0 0 0;
 }
 
 #screenshots {

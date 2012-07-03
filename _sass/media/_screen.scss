@@ -236,11 +236,8 @@ header[role=banner] {
 #logo {
   margin:0;
   padding:0;
-
-  img {
-    max-width: 70%;
-  }
-
+  text-align:center;
+  @include adjust-font-size-to(12px); 
 }
 
 /**
