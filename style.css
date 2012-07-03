@@ -1163,12 +1163,14 @@ table {
   #slab-info #slab-logo {
     display: table-cell;
     vertical-align: middle;
+    margin: 0;
   }
   #slab-info #slab-logo {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     padding: 0;
+    float: none;
   }
 }
 @media print {
