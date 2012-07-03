@@ -99,15 +99,13 @@ form#search {
 }
 
 #neatline-meta-links {
-  float:right;
-  width: 22%;
-  margin:0;
+  margin: 2em 0 0 0;
   clear:none;
-  text-align:left;
+  text-align:center;
   @include adjust-font-size-to(16px);
-  
+
   li {
-    display:block;
+    display:inline;
     margin-bottom: 2em;
     &:before {
       content: "" !important;
@@ -115,12 +113,16 @@ form#search {
     }
 
     a {
-      display:block;
-      padding: 0 0 0 0.5em;
-      margin: 0.5em 0;
-      line-height:1em;
-      border-left:1em solid rgba(0,0,0,0.1) !important;
-    }    
+      @include splash-button;
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.middle {
+        font-size: 2em;
+      }
+
+    }
   }
 }
 
@@ -184,18 +186,24 @@ form#search {
 /* Plugin List */
 
 .archive {
+
   article.plugins {
     float:left;
     clear:left;
 
     .plugin-screen {
       display:block;
-      float:right;
+      float:left;
       width: 48%;
+      border: 17px solid white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
     }
 
     .content {
-      float:left;
+      float:right;
       width: 48%;
     }
   }
