@@ -440,16 +440,18 @@ footer[role="contentinfo"] {
 
 #slab-info {
   ul {
-    margin:0;
+    margin:0 0 rhythm(1);
     padding:0;
     list-style:none;
     @include adjust-font-size-to(11px);
-    @include adjust-leading-to(1);    
+    @include adjust-leading-to(1);
+    float:left;
   }
 }
 
 #slab-logo {
   opacity: 0.5;
+  float:right;
 }
 
 .not-yet {

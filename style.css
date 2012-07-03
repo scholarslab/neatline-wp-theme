@@ -897,16 +897,18 @@ table {
   }
 
   #slab-info ul {
-    margin: 0;
+    margin: 0 0 1.75em;
     padding: 0;
     list-style: none;
     font-size: 0.688em;
     line-height: 2.545em;
     line-height: 1.75em;
+    float: left;
   }
 
   #slab-logo {
     opacity: 0.5;
+    float: right;
   }
 
   .not-yet {
