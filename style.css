@@ -788,7 +788,7 @@ table {
   }
   #content a.splash-link div.splash div.launch-overlay {
     display: none;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     text-align: center;
     height: 100%;
   }
