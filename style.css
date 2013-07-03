@@ -663,6 +663,31 @@ table {
     font-size: 0.6em;
   }
 
+  .pager {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding-top: 1.75em;
+  }
+  .pager:before, .pager:after {
+    content: "";
+    display: table;
+  }
+  .pager:after {
+    clear: both;
+  }
+  .pager, .ie .pager {
+    *zoom: 1;
+  }
+  .pager a {
+    display: block;
+    float: left;
+    width: 48%;
+    text-decoration: none;
+  }
+  .pager .newer {
+    float: right;
+    text-align: right;
+  }
+
   /**
    * Banner Header
    */
@@ -807,34 +832,34 @@ table {
     display: block;
   }
   #content a.splash-link div.splash.homepage {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/06/neatline-splash.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/06/neatline-splash.jpg");
   }
   #content a.splash-link div.splash.hotchkiss {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/chancellorsville.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/chancellorsville.jpg");
   }
   #content a.splash-link div.splash.nelly {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/nelly.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/nelly.jpg");
   }
   #content a.splash-link div.splash.num132 {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/132.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/132.jpg");
   }
   #content a.splash-link div.splash.num138 {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/138.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/138.jpg");
   }
   #content a.splash-link div.splash.uva {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/uva.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/uva.jpg");
   }
   #content a.splash-link div.splash.tech {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/tech.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/tech.jpg");
   }
   #content a.splash-link div.splash.anie {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/anie.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/anie.jpg");
   }
   #content a.splash-link div.splash.henshaw {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/henshaw1.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/henshaw1.jpg");
   }
   #content a.splash-link div.splash.lovecraft {
-    background-image: url("http://neatline.org/wp-content/uploads/2012/07/lovecraft.jpg");
+    background-image: url("http://neatline.scholarslab.org/wp-content/uploads/2012/07/lovecraft.jpg");
   }
 
   /* Homepage Styles */

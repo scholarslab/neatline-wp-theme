@@ -208,6 +208,23 @@ button,
   font-size: 0.6em;
 }
 
+.pager {
+  @include clearfix;
+  border-top: 1px solid rgba(0,0,0,0.125);
+  padding-top:rhythm(1);
+  a {
+    display:block;
+    float:left;
+    width: 48%;
+    text-decoration:none;
+  }
+
+  .newer {
+    float:right;
+    text-align:right;
+  }
+}
+
 /**
  * Banner Header
  */
