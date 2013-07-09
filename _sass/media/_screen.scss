@@ -412,15 +412,16 @@ header[role=banner] {
   list-style:none;
   padding-left:0;
   text-align:center;
-  @include adjust-font-size-to(12px);
-  margin-bottom: rhythm(1);
+  margin: rhythm(1) 0;
 
   li {
     display:inline;
-    &:not(:first-child):before {
-      content: " | ";
-      color: $default-color-lightest;
-      padding: 0 10px;
+  }
+
+  a {
+    @include splash-button;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
