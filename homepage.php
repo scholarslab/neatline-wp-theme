@@ -22,9 +22,9 @@ Template Name: Homepage
 
 <ul id="neatline-meta-links">
   <li id="neatline-download"><a href="http://omeka.org/add-ons/plugins/neatline/" title="Download the Neatline plugin.">Download</a></li>
-  <li id="neatline-learn-more"><a href="/plugins/neatline/" title="Learn more about Neatline.">Documentation</a></li>
-  <li id="neatline-see-it"><a href="/neatline-in-action/" title="See Neatline in action.">Demo Exhibits</a></li>
-  <li id="neatline-try-it"><a href="http://sandbox.neatline.org" title="Try Neatline">Live Sandbox</a></li>
+  <li id="neatline-learn-more"><a href="http://docs.neatline.org" title="Learn more about Neatline.">Documentation</a></li>
+  <li id="neatline-see-it"><a href="/neatline-in-action/" title="See Neatline in action.">Demos</a></li>
+  <li id="neatline-try-it"><a href="http://sandbox.neatline.org" title="Try Neatline">Sandbox</a></li>
 </ul>
 
 <?php get_footer(); ?>
