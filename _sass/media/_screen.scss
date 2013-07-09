@@ -169,6 +169,10 @@ img {
   height: auto;
 }
 
+code {
+  color: rgba(0,0,0,0.75);
+  @include adjust-font-size-to(14px);
+}
 /* Buttons */
 
 input {

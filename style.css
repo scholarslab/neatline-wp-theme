@@ -573,6 +573,12 @@ table {
     height: auto;
   }
 
+  code {
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 0.875em;
+    line-height: 2em;
+  }
+
   /* Buttons */
   input[type=submit], input[type=button] {
     font-family: "Cabin", "Lucida Grande", Verdana, sans-serif;
