@@ -22,7 +22,7 @@ Template Name: Homepage
 
 <ul id="neatline-meta-links">
   <li id="neatline-download"><a href="http://omeka.org/add-ons/plugins/neatline/" title="Download the Neatline plugin.">Download</a></li>
-  <li id="neatline-learn-more"><a href="/plugins/neatline/" title="Learn more about Neatline.">Learn More</a></li>
+  <li id="neatline-learn-more"><a href="/plugins/neatline/" title="Learn more about Neatline.">Documentation</a></li>
   <li id="neatline-see-it"><a href="/neatline-in-action/" title="See Neatline in action.">Demo Exhibits</a></li>
 </ul>
 
