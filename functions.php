@@ -204,10 +204,28 @@ add_filter('the_title', 'neatline_link_the_title');
  * Replaces "[...]" on excerpt_more with an actual ellipsis.
  */
 function neatline_excerpt_more( $more ) {
-  return '&hellip;' . '<a href="'.get_permalink().'">Continue reading.</a>';
+  return '';
 }
 
 add_filter( 'excerpt_more', 'neatline_excerpt_more' );
+
+function neatline_get_the_excerpt($excerpt) {
+
+  // Only do this preg_replace if there's an existing excerpt.
+  if (has_excerpt() && !is_attachment()) {
+    $excerpt = preg_replace(array('/<a([^>]*)>More.<\/a>/', '/&hellip;./'), '', $excerpt);
+  }
+
+  $excerpt = rtrim($excerpt, ",.;:_!$&#—-– ");
+  $continueLink = ' <a href="'.get_permalink().'">Continue reading.</a>';
+  if(substr($excerpt, -1) != ".") {
+    $continueLink = '&hellip;.'.$continueLink;
+  }
+  $excerpt = $excerpt . $continueLink;
+  return $excerpt;
+}
+
+add_filter('get_the_excerpt', 'neatline_get_the_excerpt');
 
 function neatline_add_post_title_class($classes) {
   global $post;
